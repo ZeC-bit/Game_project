@@ -19,13 +19,13 @@ Status variables: Your choices of action and how you talk to the characters in t
 I hope you have a heartwarming time with our game. You will reap as you sowed!
 
 Coding requirements
-1.Generation of random game sets or events: 
+1.  Generation of random game sets or events: 
 Throughout the story, the player will face different types of people depending on where the player is. But there are different probabilities for meeting the characters in the particular place. 
 
-2.Data structures for storing game status:  
+2.  Data structures for storing game status:  
 By bringing up the progress file which has been saved by the each of the player’s game status, the player can load the game. When the game has been started, the data of the player will be moved to the Game_data structure, which will be used throughout the game process.
 
-3.	Dynamic memory management 
+3.  Dynamic memory management 
 We will make arrays for affinity level, and intimacy level that depend on which characters you meet. Based on the option for what you make, particular affinity level or intimacy level will vary. For the different types of indexes we will control the each affinity level, and intimacy level for the characters.
 
 4.	Continue (File input/output): 
