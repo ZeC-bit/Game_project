@@ -6,15 +6,24 @@ Group 7
 PARK Hyeonbeom (3035552789), LEE Seunghun (3035551515)
 
 Game Description:
+
 So, you’ve come to the university with a dream of meeting new people, but things have not turned out very nicely for you? No worries, because we have developed this amazing game where you can wander about a virtual world full of exciting places, people and events awaiting you.
 
-Date System and Dynamic Endings: You will be given 10 virtual days until Christmas to go through the game. After 10 days, you will be taken to different ending scenes depending on the affinity level and some other factors such as whether you have encountered some special events during the game.
+Date System and Dynamic Endings: 
 
-Time System and Action: Each day, there are 5 timeslots: Morning 1, Morning 2, Noon, Afternoon, Evening. Some places are only open during specific timeslot. For each timeslot, you can take some action such as study at a café, eat lunch with a character in the story, watch movie with group project mate.
+You will be given 10 virtual days until Christmas to go through the game. After 10 days, you will be taken to different ending scenes depending on the affinity level and some other factors such as whether you have encountered some special events during the game.
 
-Locations: In this game are ‘Lecture room’, ‘Library’, ‘Canteen’, ‘Museum’, ‘Gymnasium’, ‘Garden’, ‘House’, ‘Convenience store’, ‘Café’, ‘Theatre’, but subject to change depending on the storyline design.
+Time System and Action: 
 
-Status variables: Your choices of action and how you talk to the characters in the game will affect status variables such as ‘Affinity level’, ‘GPA’, ‘Intimacy level’. ‘Affinity level’ and ‘Intimacy level’ are variables that are assigned to each NPC, whereas ‘GPA’ is a single variable assigned to the player.  There will also be a random variable ‘Mood’ for each NCP that will be set randomly everyday (Happy, So so, Depressed). This ‘Mood’ may multiply how much the player’s action affects the ‘Affinity level’.
+Each day, there are 5 timeslots: Morning 1, Morning 2, Noon, Afternoon, Evening. Some places are only open during specific timeslot. For each timeslot, you can take some action such as study at a café, eat lunch with a character in the story, watch movie with group project mate.
+
+Locations: 
+
+In this game are ‘Lecture room’, ‘Library’, ‘Canteen’, ‘Museum’, ‘Gymnasium’, ‘Garden’, ‘House’, ‘Convenience store’, ‘Café’, ‘Theatre’, but subject to change depending on the storyline design.
+
+Status variables: 
+
+Your choices of action and how you talk to the characters in the game will affect status variables such as ‘Affinity level’, ‘GPA’, ‘Intimacy level’. ‘Affinity level’ and ‘Intimacy level’ are variables that are assigned to each NPC, whereas ‘GPA’ is a single variable assigned to the player.  There will also be a random variable ‘Mood’ for each NCP that will be set randomly everyday (Happy, So so, Depressed). This ‘Mood’ may multiply how much the player’s action affects the ‘Affinity level’.
 
 I hope you have a heartwarming time with our game. You will reap as you sowed!
 
