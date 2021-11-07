@@ -7,5 +7,6 @@ void introduction() {
     string name;
     cout << "What is your name?";
     cin >> name;
-    
+    cout << "Welcome!";
+
 }
