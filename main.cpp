@@ -19,9 +19,23 @@ int main() {
     cout << "Hey you" << endl;
     getchar();
     cout <<  "Yes, you" << endl;
-    cout << "You look familiar"
-    cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if wish to continue from previous progress)" << endl;
+    cout << "You look familiar" << endl;
+    cout << "(Enter 1 if you want to start from beginning)" << "(Enter 2 if wish to continue from previous progress)" << endl;
     cin >> starter;
-    cout << 
+    while (true) {
+        if (starter == 1) {
+            introduction();
+            break;
+        }
+        else if (starter != 2) {
+            cout << "Wrong input, choose again!";
+            cin >> starter;
+        }
+        else {
+            break;
+        }
+    }
+    //지난 정보 불러오기
+    
     return 0;
 }
