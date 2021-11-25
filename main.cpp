@@ -1,16 +1,32 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <climits>
 
 using namespace std;
 
-void introduction() {
-    string name;
-    cout << "What is your name?";
-    cin >> name;
-
+void introduction(string * name) {
+    cout << "Can you tell me your name?\n";
+    cin >> *name;
+    cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
+    cout << "Whether it be your GPA, friends, or lover.\n";
+    cout << "Here, you can find what is lacking in your university life.\n";
+    cout << "Just a gentle push of that enter key and your journey until Christmas will begin!\n";
+    cout << ""
 }
-void load_stat(stat stat_transfer) {
+
+struct status {
+    string c_name;
+    int c_date;
+    int c_time;
+    char c_location;
+    int c_aff_level;
+    int c_int_level;
+    double c_GPA;
+    int c_health;
+};
+
+void load_stat(status stat_transfer) {
     //지난 정보 불러오기
     char filename[80];
     cin >> filename;
@@ -23,43 +39,38 @@ void load_stat(stat stat_transfer) {
     }
     string line;
     int i = 0;
-    while (getline(loader, line)) {
-        stat_transfer[i] = line;
-        i++;
-    }
+
 }
 
 int main() {
-    int starter;
-    struct stat {
-        string c_name;
-        int c_date;
-        int c_time;
-        char c_location;
-        int c_aff_level;
-        int c_int_level;
-        double c_GPA;
-        int c_health;
-    };
-    stat current_stat;
+    status current_stat;
 
-    cout << "HB and King SH presents" << endl;
+    cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
-    cout << "<Under the Mistletoe>" << endl;
+    cout << "<Under the Mistletoe>";
     getchar();
-    cout << "Hey you" << endl;
+    cout << "Hey you";
     getchar();
-    cout <<  "Yes, you" << endl;
+    cout <<  "Yes, you";
+    getchar();
     cout << "You look familiar" << endl;
-    cout << "(Enter 1 if you want to start from beginning)" << "(Enter 2 if you wish to continue from previous progress)" << endl;
+    cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
+    
+    int starter;
     cin >> starter;
+    
     while (true) {
         if (starter == 1) {
-            introduction();
+            introduction(&current_stat.c_name);
             break;
         }
         else if (starter != 2) {
-            cout << "Wrong input, choose again!";
+            cout << "Wrong input!" << endl;;
+            cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
+            while (cin.fail()) {
+                cin.clear();
+                cin.ignore(INT_MAX, '\n');
+            }
             cin >> starter;
         }
         else {
@@ -67,7 +78,5 @@ int main() {
             break;
         }
     }
-
-    
     return 0;
 }
