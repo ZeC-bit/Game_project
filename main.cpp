@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include <climits>
-#include <fstream>
+#include "universal.h"
+#include "save_load.h"
 
 using namespace std;
 
-void introduction(string * name) {
+void introduction(string * name, status& basic_stat) {
     cout << "Can you tell me your name?\n";
     cin >> *name;
     cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
@@ -21,35 +22,8 @@ void introduction(string * name) {
     getchar();
 }
 
-struct status {
-    string c_name;
-    int c_date;
-    int c_time;
-    char c_location;
-    int c_aff_level[3];
-    int c_int_level[3];
-    double c_GPA;
-    int c_health;
-};
-
-void load_data(status stat_transfer) {
-    //지난 정보 불러오기
-    char filename[80];
-    cin >> filename;
-    ifstream loader;
-    loader.open(filename);
-
-    if (loader.fail()) {
-        cout << "Error in loading the save file. Check the file, location or file name again" << endl;
-        exit(1);
-    }
-    string line;
-    int i = 0;
-
-}
-
 int main() {
-    status current_stat;
+    status current_stat = {"unkown", 0, 0, '\0', 0, 0, 3.0, 0};
 
     cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
@@ -67,7 +41,7 @@ int main() {
     
     while (true) {
         if (starter == 1) {
-            introduction(&current_stat.c_name);
+            introduction(&current_stat.c_name, current_stat);
             break;
         }
         else if (starter != 2) {
