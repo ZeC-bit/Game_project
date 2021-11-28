@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <climits>
+#include <fstream>
 
 using namespace std;
 
@@ -9,10 +9,16 @@ void introduction(string * name) {
     cout << "Can you tell me your name?\n";
     cin >> *name;
     cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
-    cout << "Whether it be your GPA, friends, or lover.\n";
-    cout << "Here, you can find what is lacking in your university life.\n";
-    cout << "Just a gentle push of that enter key and your journey until Christmas will begin!\n";
-    cout << ""
+    getchar();
+    cout << "Whether it be your GPA, friends, or lover.";
+    getchar();
+    cout << "Here, you can find what is lacking in your university life.";
+    getchar();
+    cout << "Just a gentle push of that enter key and your journey until Christmas will begin!";
+    getchar();
+    cout << "But remember! You are responsible for your choices!\n";
+    cout << "(Press enter/return to dive in!)";
+    getchar();
 }
 
 struct status {
@@ -20,13 +26,13 @@ struct status {
     int c_date;
     int c_time;
     char c_location;
-    int c_aff_level;
-    int c_int_level;
+    int c_aff_level[3];
+    int c_int_level[3];
     double c_GPA;
     int c_health;
 };
 
-void load_stat(status stat_transfer) {
+void load_data(status stat_transfer) {
     //지난 정보 불러오기
     char filename[80];
     cin >> filename;
@@ -74,7 +80,7 @@ int main() {
             cin >> starter;
         }
         else {
-            load_stat(current_stat);
+            load_data(current_stat);
             break;
         }
     }
