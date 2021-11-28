@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <climits>
+#include <fstream>
 
 using namespace std;
 
@@ -31,7 +32,7 @@ struct status {
     int c_health;
 };
 
-void load_stat(status stat_transfer) {
+void load_data(status stat_transfer) {
     //지난 정보 불러오기
     char filename[80];
     cin >> filename;
@@ -79,7 +80,7 @@ int main() {
             cin >> starter;
         }
         else {
-            load_stat(current_stat);
+            load_data(current_stat);
             break;
         }
     }
