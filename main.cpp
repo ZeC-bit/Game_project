@@ -6,10 +6,10 @@
 
 using namespace std;
 
-void introduction(string * name, status& basic_stat) {
+void introduction(status *basic_stat) {
     cout << "Can you tell me your name?\n";
-    cin >> *name;
-    cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
+    cin >> *basic_stat->name;
+    cout << "Hello " << *basic_stat->name << "! Welcome to the University of Love and Peace!\n";
     getchar();
     cout << "Whether it be your GPA, friends, or lover.";
     getchar();
@@ -19,12 +19,12 @@ void introduction(string * name, status& basic_stat) {
     getchar();
     cout << "But remember! You are responsible for your choices!\n";
     cout << "(Press enter/return to dive in!)";
+    save_data(basic_stat);
     getchar();
 }
 
 int main() {
-    status current_stat = {"unkown", 0, 0, '\0', 0, 0, 3.0, 0};
-
+    status current_stat = {"unkown", 0, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 0};
     cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
     cout << "<Under the Mistletoe>";
@@ -41,7 +41,7 @@ int main() {
     
     while (true) {
         if (starter == 1) {
-            introduction(&current_stat.c_name, current_stat);
+            introduction(&current_stat.name, current_stat);
             break;
         }
         else if (starter != 2) {
@@ -52,10 +52,6 @@ int main() {
                 cin.ignore(INT_MAX, '\n');
             }
             cin >> starter;
-        }
-        else {
-            load_data(current_stat);
-            break;
         }
     }
     return 0;
