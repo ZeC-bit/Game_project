@@ -1,11 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "universal.h"
 #include "save_load.h"
 
 using namespace std;
 
-void save_data(status &stat_save)
+void save_data(status stat_save)
 {
     string flag;
     cout << "Do you want to save current progress?";
@@ -23,7 +24,11 @@ void save_data(status &stat_save)
     cin >> save_name;
     save_name += ".txt";
     d_out.open(save_name.c_str());
-    d_out << stat_save.c_name << endl << stat_save.c_date << endl << stat_save.c_time << endl << stat_save.c_location << endl << stat_save.c_aff_level << endl << stat_save.c_int_level << endl << stat_save.c_GPA << endl << stat_save.c_health << endl;
+    d_out << stat_save.name << endl << stat_save.date << endl << stat_save.time << endl << stat_save.location << endl;
+    for (int i = 0; i != 3; i++) {
+        d_out << stat_save.aff_level[i] << endl << stat_save.int_level[i] << endl;
+    }
+    d_out << stat_save.GPA << endl << stat_save.health << endl;
     cout << "Your current progress has been saved at \"" << save_name << ".txt!\"\n";
     d_out.close();
 }
