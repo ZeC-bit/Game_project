@@ -24,7 +24,7 @@ void introduction(string *name) {
 }
 
 int main() {
-    status current_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3};
+    status starting_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3};
     cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
     cout << "<Under the Mistletoe>";
@@ -41,7 +41,7 @@ int main() {
     
     while (true) {
         if (starter == 1) {
-            introduction(&current_stat.name);
+            introduction(&starting_stat.name);
             break;
         }
         else if (starter != 2) {
@@ -57,6 +57,6 @@ int main() {
             //데이터 불러오기 (load_data함수 실행)
         }
     }
-    execution(current_stat);
+    execution(starting_stat);
     return 0;
 }
