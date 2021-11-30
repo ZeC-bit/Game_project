@@ -32,3 +32,7 @@ void save_data(status stat_save)
     cout << "Your current progress has been saved at \"" << save_name << ".txt!\"\n";
     d_out.close();
 }
+
+int main () {
+    status rand_stat = {}
+}
