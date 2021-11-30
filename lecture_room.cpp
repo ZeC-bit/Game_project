@@ -3,6 +3,7 @@
 #include <time.h>
 #include <string>
 #include <cstdlib>
+#include <stdlib.h>
 #include <time.h>
 #include "garden.h"
 #include "universal.h"
@@ -11,8 +12,6 @@ using namespace std;
 //play.period ==> 1. morning 2. afternoon 3. evening
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
-
-
 void lect(status* input_stat, int* location){
   char choose;
   int input;
@@ -144,7 +143,10 @@ void lect(status* input_stat, int* location){
 
 
         cout << "-------------------showing the current status:---------------  " << endl;
-        cout << " " << affi_lev << " " << inti_lev << " " << input_stat->GPA << " " << input_stat->hp << " " << endl;
+        for(int i=0; i<3; i++){
+          cout << " " << input_stat->affi_lev[i] << " " << input_stat->inti_lev[i] << " " << input_stat->GPA << " " << input_stat->hp << " " << endl;
+        }
+        
         }
       }
     }
