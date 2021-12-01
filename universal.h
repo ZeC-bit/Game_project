@@ -8,10 +8,10 @@ struct status {
     int date;
     int time;
     char location;
-    double aff_level[3];
-    double int_level[3];
+    double affi_level[3];
+    double inti_level[3];
     double GPA;
-    int health;
+    int hp;
     std::string names[3];
 };
 
