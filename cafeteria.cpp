@@ -12,7 +12,7 @@ using namespace std;
 // Iris = [0], Olivia = [1], Daisy = [2]
 
 
-void cafe(status* input_stat, int mood[3]){
+void cafe(status* input_stat, int mood){
   char choose;
   int input;
   char name;
@@ -28,7 +28,6 @@ void cafe(status* input_stat, int mood[3]){
   }
   int run = 1;
   while(run == 1){
-    double inti_lev; double affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
     if(data == 2){
       int sel;
       cout << " You selected to come to Cafeteria." << endl;
@@ -82,8 +81,8 @@ void cafe(status* input_stat, int mood[3]){
             input_stat->affi_level[0] -= decrement;
           }
           else{
-            cout << " It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
-            inti_lev += 1;
+            cout << " Iris: It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
+            input_stat->inti_level[0] += 1;
           }
         }
         else if(Daisy_Appear > 80 && Daisy_Appear < 90){
