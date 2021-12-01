@@ -4,7 +4,6 @@
 #include <string>
 #include <cstdlib>
 #include <stdlib.h>
-#include <time.h>
 #include "garden.h"
 #include "universal.h"
 using namespace std;
@@ -12,7 +11,7 @@ using namespace std;
 //play.period ==> 1. morning 2. afternoon 3. evening
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
-void lect(status* input_stat){
+void lect(status* input_stat, int mood[3]){
   char choose;
   int input;
   char name;

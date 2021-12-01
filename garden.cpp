@@ -3,7 +3,6 @@
 #include <time.h>
 #include <string>
 #include <cstdlib>
-#include <time.h>
 #include "garden.h"
 #include "universal.h"
 using namespace std;
