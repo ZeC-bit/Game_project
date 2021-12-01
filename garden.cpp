@@ -11,7 +11,7 @@ using namespace std;
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 
-void garden(status* input_stat, int mood[3]){
+void garden(status* input_stat, int mood){
   char choose;
   int input;
   char name;
@@ -27,7 +27,6 @@ void garden(status* input_stat, int mood[3]){
   }
   int run = 1;
   while(run == 1){
-    int inti_lev; int affi_lev; double input_stat->GPA; int hp; int mood;
     if(data == 1){
       int sel;
       cout << " You selected to come to Garden." << endl;
@@ -145,7 +144,7 @@ void garden(status* input_stat, int mood[3]){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 1;
-        }
+          }
         }
       }
     }
