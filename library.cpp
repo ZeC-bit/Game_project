@@ -11,7 +11,7 @@ using namespace std;
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 
-void libr(status* input_stat, int mood){
+void library(status* input_stat, int mood){
   char choose;
   int input;
   char name;
