@@ -146,4 +146,3 @@ void lect(status* input_stat, int mood){
         }
       }
     }
-  
