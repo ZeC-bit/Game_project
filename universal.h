@@ -8,11 +8,11 @@ struct status {
     int date;
     int time;
     char location;
-    std::string names[3] = {"Iris", "Olivia", "Daisy"};
     int aff_level[3];
     int int_level[3];
     double GPA;
     int health;
+    std::string names[3];
 };
 
 #endif
