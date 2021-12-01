@@ -143,19 +143,19 @@ void library(status* input_stat, int mood){
     	    cin >> input;
     	    if(input == 1)
     	    {
-    	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
+    	      cout << "Wrong! You have lost 0.5 GPA points" << endl;
     	      input_stat->GPA -= 0.5;
             input_stat->sun += 1;
     	    }
     	    else if(input ==2)
     	    {
-    	      cout << "Correct!!! You have gained 0.5 input_stat->input_stat->GPA points" << endl;
+    	      cout << "Correct!!! You have gained 0.5 GPA points" << endl;
     	      input_stat->GPA += 0.5;
             input_stat->sun += 1;
     	    }
     	    else
     	    {
-    	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
+    	      cout << "Wrong! You have lost 0.5 GPA points" << endl;
     	      input_stat->GPA -= 0.5;
             input_stat->sun += 1;
     	    }
@@ -174,5 +174,6 @@ void library(status* input_stat, int mood){
           input_stat->hp += 1;
           input_stat->sun += 1;
         }
+      run = 0;
       }
     }
