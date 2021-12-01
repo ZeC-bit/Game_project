@@ -7,10 +7,11 @@
 #include "garden.h"
 #include "cafeteria.h"
 #include "lecture.h"
+#include "save_load.h"
 
 using namespace std;
 
-void decision (status pass_stat, int pass_mood, bool *qt) {
+void decision (status& pass_stat, int pass_mood, bool *qt) {
     cout << "What are you up to?" << endl;
     cout << "[1] Go to library [2] Go to garden [3] Go to cafeteria" << endl;
     cout << "[4] Go to lecture room [5] Save progress [6] Load save data" << endl;
@@ -34,9 +35,10 @@ void decision (status pass_stat, int pass_mood, bool *qt) {
             lect(&pass_stat, pass_mood);
             break;
         case 5:
+            save_data(pass_stat);
             break;
         case 7:
-            cout << "See you again!";
+            cout << "See you again!\n";
             *qt = true;
             break;
         default:
@@ -49,21 +51,22 @@ void decision (status pass_stat, int pass_mood, bool *qt) {
     }
 }
 
-void execution(status current_stat) {
+void execution(status& stat_in) {
+    status current_stat = stat_in;
     //Random variable "mood" which can have 3 possible integers.
     //mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
     int mood;
     bool qt_flag = false;
-    status * cs_ptr = & current_stat;
+    status *cs_ptr = & current_stat;
     
     while (current_stat.date != 10) {
-        if (current_stat.time >= 3) {
-            cs_ptr->time = 0;
-            current_stat.date++;
+        if (current_stat.sun >= 3) {
+            (*cs_ptr).sun = 0;
+            (*cs_ptr).date++;
         }
         cout << endl;
         cout << "Day " << current_stat.date << " ";
-        switch (current_stat.time)
+        switch (current_stat.sun)
         {
             case 0:
                 cout << "Morning\n";
@@ -79,10 +82,10 @@ void execution(status current_stat) {
             cout << endl;
         }
         cout << "Health Point : " << current_stat.hp << "   " << "GPA : " << current_stat.GPA << endl;
-        if (current_stat.time == 0) {
+        if (current_stat.sun == 0) {
             cout << "Good morning " << current_stat.name << "!" << endl;
         }
-        else if (current_stat.time == 1) {
+        else if (current_stat.sun == 1) {
             cout << "Good afternoon " << current_stat.name << "!" << endl;
         }
         else {
@@ -93,6 +96,12 @@ void execution(status current_stat) {
             srand(time(0));
             mood = rand() % 3;
             decision(current_stat, mood, &qt_flag);
+        }
+        if (current_stat.hp <= 0) {
+            cout << "Your Health became too bad and you earned yourself cancer.\n";
+            cout << "You died T.T. Try to do some exercise next time!\n";
+            cout << "(Hint: Why not play some sports?)\n";
+            break;
         }
         if (qt_flag == true) {
             break;
