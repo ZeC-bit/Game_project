@@ -32,9 +32,9 @@ int main() {
     getchar();
     cout << "<Under the Mistletoe>";
     getchar();
-    cout << "Hey you";
+    cout << "Hey you!";
     getchar();
-    cout <<  "Yes, you";
+    cout <<  "Yes, you!";
     getchar();
     cout << "You look familiar" << endl;
     cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
@@ -43,7 +43,11 @@ int main() {
     cin >> starter;
     
     while (true) {
-        if (starter != 2) {
+        if (starter == 1) {
+            introduction(&starting_stat.name);
+            break;
+        }
+        else if (starter != 2) {
             cout << "Wrong input!" << endl;;
             cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
             while (cin.fail()) {
@@ -51,10 +55,6 @@ int main() {
                 cin.ignore(INT_MAX, '\n');
             }
             cin >> starter;
-        }
-        else if (starter == 1) {
-            introduction(&starting_stat.name);
-            break;
         }
         else {
             continue;
