@@ -11,9 +11,9 @@ void save_data(status stat_save)
     string flag;
     cout << "Do you want to save current progress?";
     getchar();
-    cout << "Press 'y' if you want to save progress. Press 'n' if you do not wish to save.";
+    cout << "Press 'n' if you do not wish to save.";
     
-    cin >> flag;
+    flag = getchar();
     if (flag == "n" || flag == "N") {
         exit(1);
     }
@@ -29,6 +29,12 @@ void save_data(status stat_save)
         d_out << stat_save.aff_level[i] << endl << stat_save.int_level[i] << endl;
     }
     d_out << stat_save.GPA << endl << stat_save.health << endl;
-    cout << "Your current progress has been saved at \"" << save_name << ".txt!\"\n";
+    cout << "Your current progress has been saved at \"" << save_name << "!\"" << endl;
     d_out.close();
+}
+
+int main () {
+    status rand_stat = {"unkown", 1, 0, '\0', {1,2,3}, {1,2,}, 3.23, 3, {"Iris", "Olivia", "Daisy"}};
+    save_data(rand_stat);
+    return 0;
 }

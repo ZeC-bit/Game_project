@@ -3,6 +3,9 @@
 #include <climits>
 #include "universal.h"
 #include "save_load.h"
+#include "execution.h"
+#include "library.h"
+
 
 using namespace std;
 
@@ -24,7 +27,7 @@ void introduction(string *name) {
 }
 
 int main() {
-    status current_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3};
+    status starting_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
     cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
     cout << "<Under the Mistletoe>";
@@ -40,11 +43,7 @@ int main() {
     cin >> starter;
     
     while (true) {
-        if (starter == 1) {
-            introduction(&current_stat.name);
-            break;
-        }
-        else if (starter != 2) {
+        if (starter != 2) {
             cout << "Wrong input!" << endl;;
             cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
             while (cin.fail()) {
@@ -53,10 +52,15 @@ int main() {
             }
             cin >> starter;
         }
+        else if (starter == 1) {
+            introduction(&starting_stat.name);
+            break;
+        }
         else {
-            //데이터 불러오기 (load_data함수 실행)
+            starting_stat = load_data();
         }
     }
-    execution(current_stat);
+    execution(starting_stat);
+    
     return 0;
 }
