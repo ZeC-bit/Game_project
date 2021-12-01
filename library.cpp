@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <time.h>
+#include <stdio.h>
 #include <string>
 #include <cstdlib>
 #include <stdlib.h>
@@ -70,7 +70,7 @@ void library(status* input_stat, int mood){
         else if(Iris_Appear > 70 && Iris_Appear < 79){
           cout<< " Daisy appears on the library " << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
-          cout << "Introducing herself: I was your classmate in the high school!!" << endl;
+          cout << "Daisy: I was your classmate in the high school!!" << endl;
           cout << "It is a surprise to meet you here!!!" << endl;
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
@@ -100,7 +100,8 @@ void library(status* input_stat, int mood){
         }
         else if(Iris_Appear > 80 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
-          cout << " Hi, I'm Olivia  " << endl;
+          cout << " Hi, I'm Olivia. " << endl;
+          cout <<
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
           cout << " But, you came to the library. " << endl;
