@@ -18,12 +18,12 @@ void library(status* input_stat, int mood){
   double decrement = -1;
   int sun;
   if (mood == 0){
-    decrement = -1.5;
-    increment = 0.8;
+    decrement -= 0.5;
+    increment -= 0.2;
   }
   if (mood == 2) {
-    increment = 2;
-    decrement = -0.8;
+    increment += 1;
+    decrement += 0.2;
   }
   int run = 1;
   while(run == 1){
@@ -35,6 +35,7 @@ void library(status* input_stat, int mood){
       if(sel ==1){
         srand(time(0));
         int Iris_Appear = rand() % 100;
+        //Iris appears
         if(Iris_Appear < 70){
           cout << " Iris appears on the library " << endl;
           cout << "Hi, I'm Iris!" << endl;
@@ -52,7 +53,7 @@ void library(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Iris: Please don't fight...(But you made him silent) " << endl;
-            input_stat->inti_level[0] += increment;
+            input_stat.inti_level[0] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -160,8 +161,7 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
     	    }
         }
-        input_stat->inti_level[1] += 1;
-        input_stat->sun += 1;
+        input_stat->
         input_stat->hp -= 1;
       }
       else if(sel == 2){
