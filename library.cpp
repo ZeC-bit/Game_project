@@ -160,6 +160,8 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
     	    }
         }
+        input_stat->inti_level[1] += 1;
+        input_stat->sun += 1;
         input_stat->hp -= 1;
       }
       else if(sel == 2){
