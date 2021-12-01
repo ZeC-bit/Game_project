@@ -2,6 +2,6 @@
 #define GARDEN_H
 #include "universal.h"
 
-void garden(status* input_stat, int mood[3]);
+void garden(status* input_stat, int mood);
 
 #endif
