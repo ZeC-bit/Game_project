@@ -71,6 +71,10 @@ void ending(status &stat_data){
         cout << "------------------------------[BEST FRIEND IRIS ENDING]----------------------------------" << endl;
         cout << " Congratulations!!! Iris has become your best friend!!! "<< endl;
         cout << " Coming Christmas, you are not alone!! You are going to make a Christmas Tree with Iris!! " << endl;
+        cout << setw(5) << " Thank you for playing this Game!!" << endl;
+        cout << setw(13) << " CREDITS TO " << endl;
+        cout << setw(12) << " PARK HYEON BEOM " << endl;
+        cout << setw(12) << " LEE SEUNG HUN" << endl;
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
       else if(inti_largest == stat_data.inti_level[1])
