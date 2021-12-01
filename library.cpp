@@ -53,7 +53,7 @@ void library(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Iris: Please don't fight...(But you made him silent) " << endl;
-            input_stat.inti_level[0] += increment;
+            input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
