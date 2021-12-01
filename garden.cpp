@@ -12,7 +12,7 @@ using namespace std;
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 
-void garden(status* input_stat, int* location){
+void garden(status* input_stat, int mood[3]){
   char choose;
   int input;
   char name;
@@ -127,22 +127,23 @@ void garden(status* input_stat, int* location){
               cout << " Wrong! You have lost 0.5 input_stat->GPA points. " << endl;
               input_stat->GPA -= 0.5;
             }
-            }
+          }
             hp -= 1;
           }
-          else if(sel == 2){
+        else if(sel == 2){
             cout << "Going back home. " << endl;
             hp -= 1;
           }
-          else if(sel == 3){
+        else if(sel == 3){
             cout << " You entered Badminton Club. " << endl;
             cout << " By playing badminton you can gain health point per match! " << endl;
             hp += 1;
           }
+        }
 
         cout << "-------------------showing the current status:---------------  " << endl;
         cout << " " << affi_lev << " " << inti_lev << " " << input_stat->GPA << " " << hp << " " << endl;
+      }
         }
       }
     }
-  }
