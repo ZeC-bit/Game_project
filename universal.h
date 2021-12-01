@@ -1,7 +1,6 @@
 #ifndef UNIVERSAL_H
 #define UNIVERSAL_H
 #include <string>
-#include <vector>
 
 struct status {
     std::string name;
@@ -14,7 +13,5 @@ struct status {
     int hp;
     std::string names[3];
 };
-
-
 
 #endif
