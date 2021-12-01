@@ -58,7 +58,7 @@ void library(status* input_stat, int mood){
           else if(input == 2){
             cout << " Iris: Thank you for your courage! " << endl;
             input_stat->affi_level[0] += increment;
-            sun += 1;
+            input_stat->sun += 1;
           }
           else{
             cout << " (Iris's face seems disappointed) " << endl;
@@ -160,18 +160,18 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
     	    }
         }
-        input_stat->hp += 1;
+        input_stat->hp -= 1;
       }
       else if(sel == 2){
           cout << "Going back home. " << endl;
-          input_stat->hp += 1;
+          input_stat->hp -= 1;
           input_stat->sun += 1;
 
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
-          input_stat->hp += 1;
+          input_stat->hp += 2;
           input_stat->sun += 1;
         }
       run = 0;
