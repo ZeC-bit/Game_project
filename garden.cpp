@@ -27,7 +27,6 @@ void garden(status* input_stat, int mood){
   }
   int run = 1;
   while(run == 1){
-    if(data == 1){
       int sel;
       cout << " You selected to come to Garden." << endl;
       cout << " In Garden, there is a higher probability for Olivia to appear. Do you want to enter?" << endl;
@@ -145,6 +144,5 @@ void garden(status* input_stat, int mood){
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 1;
           }
-        }
       }
     }
