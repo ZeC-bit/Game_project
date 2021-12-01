@@ -100,7 +100,7 @@ void library(status* input_stat, int mood){
         }
         else if(Iris_Appear > 80 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
-          cout << " Hi, I'm Olivia  "
+          cout << " Hi, I'm Olivia  " << endl;
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
           cout << " But, you came to the library. " << endl;
