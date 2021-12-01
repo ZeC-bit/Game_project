@@ -27,7 +27,7 @@ void introduction(string *name) {
 }
 
 int main() {
-    status starting_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
+    status starting_stat = {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
     cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
     getchar();
     cout << "<Under the Mistletoe>";
@@ -60,7 +60,7 @@ int main() {
             continue;
         }
     }
-    execution(&starting_stat);
+    execution(starting_stat);
     
     return 0;
 }
