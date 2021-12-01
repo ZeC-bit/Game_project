@@ -2,6 +2,6 @@
 #define LECTURE_H
 #include "universal.h"
 
-void lecture(status* input_stat);
+void lect(status* input_stat, int mood[3]);
 
 #endif
