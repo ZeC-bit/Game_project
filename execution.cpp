@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void decision (status pass_stat, int pass_mood[3], bool *qt) {
+void decision (status pass_stat, int pass_mood, bool *qt) {
     cout << "What are you up to?" << endl;
     cout << "[1] Go to library [2] Go to garden [3] Go to cafeteria" << endl;
     cout << "[4] Go to lecture room [5] Save progress [6] Load save data" << endl;
@@ -22,19 +22,19 @@ void decision (status pass_stat, int pass_mood[3], bool *qt) {
     switch ( input )
     {
         case 1:
-            library(pass_stat, pass_mood[3]);
+            library(&pass_stat, pass_mood);
             correct_input = true;
             break;
         case 2:
-            garden(pass_stat, pass_mood[3]);
+            garden(&pass_stat, pass_mood);
             correct_input = true;
             break;
         case 3:
-            cafeteria(pass_stat, pass_mood[3]);
+            cafeteria(&pass_stat, pass_mood);
             correct_input = true;
             break;
         case 4:
-            lect(pass_stat, pass_mood[3]);
+            lect(&pass_stat, pass_mood);
             correct_input = true;
             break;
         case 5:
@@ -51,17 +51,15 @@ void decision (status pass_stat, int pass_mood[3], bool *qt) {
                 cin.clear();
                 cin.ignore(INT_MAX, '\n');
             }
-            decision(pass_stat, &pass_mood[3], &*qt);
+            decision(pass_stat, pass_mood, &*qt);
     }
 }
 
 void execution(status current_stat) {
     //Random variable "mood" which can have 3 possible integers.
     //mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
-    int mood[3];
+    int mood;
     bool qt_flag = false;
-
-    status current_stat = {"unkown", 1, 0, '\0', {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
 
     while (current_stat.date != 10) {
         cout << endl;
@@ -78,10 +76,10 @@ void execution(status current_stat) {
                 cout << "Evening\n";
         }
         for (int j = 0; j != 3; j++) {
-            cout << current_stat.names[j] << " Intimacy Level: [" << current_stat.int_level[j] << "]";
+            cout << current_stat.names[j] << " Intimacy Level: [" << current_stat.inti_level[j] << "]";
             cout << endl;
         }
-        cout << "Health Point : " << current_stat.health << "   " << "GPA : " << current_stat.GPA << endl;
+        cout << "Health Point : " << current_stat.hp << "   " << "GPA : " << current_stat.GPA << endl;
         if (current_stat.time == 0) {
             cout << "Good morning " << current_stat.name << "!" << endl;
         }
@@ -90,13 +88,11 @@ void execution(status current_stat) {
         }
         else {
             cout << "Good evening " << current_stat.name << "!" << endl;
-        
+        }
         
         if (current_stat.date != 5) {
-            for (int i = 0; i != 3; i++) {
-                srand(time(0));
-                mood[i] = rand() % 3;
-            }
+            srand(time(0));
+            mood = rand() % 3;
             decision(current_stat, mood, &qt_flag);
         }
         if (qt_flag == true) {
