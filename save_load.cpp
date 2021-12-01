@@ -24,7 +24,7 @@ void save_data(status stat_save)
     cin >> save_name;
     save_name += ".txt";
     d_out.open(save_name.c_str());
-    d_out << stat_save.name << endl << stat_save.date << endl << stat_save.time << endl << stat_save.location << endl;
+    d_out << stat_save.name << endl << stat_save.date << endl << stat_save.sun << endl << stat_save.location << endl;
     for (int i = 0; i != 3; i++) {
         d_out << stat_save.affi_level[i] << endl << stat_save.inti_level[i] << endl;
     }
