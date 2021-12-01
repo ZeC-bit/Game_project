@@ -53,7 +53,7 @@ void library(status* input_stat, int mood){
           if(input == 1){
             cout << " Iris: Please don't fight...(But you made him silent) " << endl;
             input_stat->inti_level[0] += increment;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
           else if(input == 2){
             cout << " Iris: Thank you for your courage! " << endl;
@@ -64,7 +64,7 @@ void library(status* input_stat, int mood){
             cout << " (Iris's face seems disappointed) " << endl;
             input_stat->inti_level[0] -= decrement;
             input_stat->affi_level[0] -= decrement;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
         }
         else if(Iris_Appear > 70 && Iris_Appear < 79){
@@ -84,23 +84,23 @@ void library(status* input_stat, int mood){
           if(input == 1){
             cout << " Daisy: I can't wait till the end of the exams...But have too much things to do.. " << endl;
             input_stat->inti_level[2] += increment;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
           else if(input == 2){
             cout << " Daisy: (Sleeping)..... " << endl;
             input_stat->inti_level[2] -= decrement;
             input_stat->affi_level[2] -= decrement;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
           else{
             cout << " Daisy: Thank you so much!! I feel so fresh now!! " << endl;
             input_stat->affi_level[2] += increment;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
         }
         else if(Iris_Appear > 80 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
-          cout << "  "
+          cout << " Hi, I'm Olivia  "
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
           cout << " But, you came to the library. " << endl;
@@ -113,18 +113,18 @@ void library(status* input_stat, int mood){
           if(input == 1){
             cout << " Olivia: I can't wait till the end of the exams...But have too much things to do.. " << endl;
             input_stat->inti_level[1] += increment;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
           else if(input == 2){
             cout << " Olivia: (Sleeping)..... " << endl;
             input_stat->inti_level[1] -= decrement;
             input_stat->affi_level[1] -= decrement;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
           else{
             cout << " Olivia: Thank you so much!! I feel so fresh now!! " << endl;
             input_stat->affi_level[1] += increment;
-            input_stat.time += 1;
+            input_stat->time += 1;
           }
         }
 
@@ -144,19 +144,19 @@ void library(status* input_stat, int mood){
     	    {
     	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
     	      input_stat->GPA -= 0.5;
-            input_stat.time += 1;
+            input_stat->time += 1;
     	    }
     	    else if(input ==2)
     	    {
     	      cout << "Correct!!! You have gained 0.5 input_stat->input_stat->GPA points" << endl;
     	      input_stat->GPA += 0.5;
-            input_stat.time += 1;
+            input_stat->time += 1;
     	    }
     	    else
     	    {
     	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
     	      input_stat->GPA -= 0.5;
-            input_stat.time += 1;
+            input_stat->time += 1;
     	    }
           input_stat->hp -= 1;
         }
@@ -164,14 +164,14 @@ void library(status* input_stat, int mood){
       else if(sel == 2){
           cout << "Going back home. " << endl;
           input_stat->hp -= 1;
-          input_stat.time += 1;
+          input_stat->time += 1;
 
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 1;
-          input_stat.time += 1;
+          input_stat->time += 1;
         }
       }
     }
