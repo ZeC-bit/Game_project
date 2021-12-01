@@ -11,7 +11,7 @@ using namespace std;
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 
-void libr(status* input_stat, int mood[3]){
+void libr(status* input_stat, int mood){
   char choose;
   int input;
   char name;
@@ -27,9 +27,6 @@ void libr(status* input_stat, int mood[3]){
   }
   int run = 1;
   while(run == 1){
-    double inti_lev; double affi_lev; double input_stat->input_stat->GPA; int input_stat->hp; int mood;
-
-    if(data == 0){
       int sel;
       cout << " You selected to come to Library." << endl;
       cout << " In Library, there is a higher probability for Iris to appear. Do you want to enter?" << endl;
@@ -43,7 +40,7 @@ void libr(status* input_stat, int mood[3]){
           getchar();
           cout << " You met Iris on Main library. " << endl;
           cout << " Since you and Iris feel so distracted from the noise " << endl;
-          cout << " at the side study table playing League of Legend, "
+          cout << " at the side study table playing League of Legend " << endl;
           getchar();
           cout << " You may choose between three options: "<< endl;
           cout << " 1. Go fight for the peace of main library. " << endl;
@@ -131,17 +128,17 @@ void libr(status* input_stat, int mood[3]){
     	    if(input == 1)
     	    {
     	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
-    	      input_stat->input_stat->GPA -= 0.5;
+    	      input_stat->GPA -= 0.5;
     	    }
     	    else if(input ==2)
     	    {
     	      cout << "Correct!!! You have gained 0.5 input_stat->input_stat->GPA points" << endl;
-    	      input_stat->input_stat->GPA += 0.5;
+    	      input_stat->GPA += 0.5;
     	    }
     	    else
     	    {
     	      cout << "Wrong! You have lost 0.5 input_stat->input_stat->GPA points" << endl;
-    	      input_stat->input_stat->GPA -= 0.5;
+    	      input_stat->GPA -= 0.5;
     	    }
           input_stat->hp -= 1;
         }
@@ -157,4 +154,3 @@ void libr(status* input_stat, int mood[3]){
         }
       }
     }
-  }

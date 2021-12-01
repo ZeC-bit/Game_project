@@ -11,7 +11,7 @@ using namespace std;
 //play.period ==> 1. morning 2. afternoon 3. evening
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
-void lect(status* input_stat, int mood[3]){
+void lect(status* input_stat, int mood){
   char choose;
   int input;
   char name;
@@ -27,8 +27,6 @@ void lect(status* input_stat, int mood[3]){
   }
   int run = 1;
   while(run == 1){
-    double inti_lev; double affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
-    if(data == 3){
       int sel;
       cout << " You selected to come to the Lecture Room." << endl;
       cout << " In Lecture Room, there is a higher probability for Prof. T. W. Chim to appear. Do you want to enter?" << endl;
@@ -148,4 +146,4 @@ void lect(status* input_stat, int mood[3]){
         }
       }
     }
-  }
+  
