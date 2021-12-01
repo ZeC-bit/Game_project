@@ -4,7 +4,7 @@
 #include "universal.h"
 #include "save_load.h"
 #include "execution.h"
-#include "library.h"
+
 
 
 using namespace std;
@@ -57,7 +57,7 @@ int main() {
             break;
         }
         else {
-            starting_stat = load_data();
+            continue;
         }
     }
     execution(starting_stat);
