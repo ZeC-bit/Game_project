@@ -12,13 +12,23 @@ using namespace std;
 //play.period ==> 1. morning 2. afternoon 3. evening
 //play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
-void lect(status* input_stat, int* location){
+void lect(status* input_stat){
   char choose;
   int input;
   char name;
+  double increment = 1;
+  double decrement = -1;
+  if (mood == 0){
+    decrement = -1.5;
+    increment = 0.8;
+  }
+  if (mood == 2) {
+    increment = 2;
+    decrement = -0.8;
+  }
   int run = 1;
   while(run == 1){
-    int  inti_lev; int affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
+    double inti_lev; double affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
     if(init ==0){
       if(data == 3){
         int sel;
@@ -67,16 +77,16 @@ void lect(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << " Iris: ....." << endl;
-              input_stat->affi_level[0] -= 1;
-              input_stat->inti_level[0] -= 1;
+              input_stat->affi_level[0] -= decrement;
+              input_stat->inti_level[0] -= decrement;
             }
             else if(input == 2){
               cout << " Iris: Alright! Let's study harder until end of all exams " << endl;
-              input_stat->inti_level[0] += 1;
+              input_stat->inti_level[0] += increment;
             }
             else{
               cout << " Iris: Seriously?? Great!! Let's go go go!!! " << endl;
-              input_stat->affi_level[0] += 1;
+              input_stat->affi_level[0] += increment;
             }
           }
           else if(Chim_Appear > 80 && Chim_Appear < 90){
@@ -90,16 +100,16 @@ void lect(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << " Olivia: ....." << endl;
-              input_stat->affi_level[1] -= 1;
-              input_stat->inti_level[1] -= 1;
+              input_stat->affi_level[1] -= decrement;
+              input_stat->inti_level[1] -= decrement;
             }
             else if(input == 2){
               cout << " Olivia: Alright! Let's study harder until end of all exams " << endl;
-              input_stat->inti_level[1] += 1;
+              input_stat->inti_level[1] += increment;
             }
             else{
               cout << " Olivia: Seriously?? Great!! Let's go go go!!! " << endl;
-              input_stat->affi_level[1] += 1;
+              input_stat->affi_level[1] += increment;
             }
           }
           else
@@ -115,16 +125,16 @@ void lect(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << " Daisy: ....." << endl;
-              input_stat->affi_level[2] -= 1;
-              input_stat->inti_level[2] -= 1;
+              input_stat->affi_level[2] -= decrement;
+              input_stat->inti_level[2] -= decrement;
             }
             else if(input == 2){
               cout << " Daisy: Alright! Let's study harder until end of all exams " << endl;
-              input_stat->inti_level[2] += 1;
+              input_stat->inti_level[2] += increment;
             }
             else{
               cout << " Daisy: Seriously?? Great!! Let's go go go!!! " << endl;
-              input_stat->affi_level[2] += 1;
+              input_stat->affi_level[2] += increment;
             }
           }
             input_stat->hp -= 1;
@@ -146,7 +156,7 @@ void lect(status* input_stat, int* location){
         for(int i=0; i<3; i++){
           cout << " " << input_stat->affi_lev[i] << " " << input_stat->inti_lev[i] << " " << input_stat->GPA << " " << input_stat->hp << " " << endl;
         }
-        
+
         }
       }
     }
