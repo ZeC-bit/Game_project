@@ -2,6 +2,6 @@
 #define CAFETERIA_H
 #include "universal.h"
 
-void cafeteria(status* input_stat, int mood[3]);
+void cafeteria(status* input_stat, int mood);
 
 #endif
