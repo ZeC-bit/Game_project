@@ -5,8 +5,7 @@
 struct status {
     std::string name;
     int date;
-    int time;
-    char location;
+    int sun;
     double affi_level[3];
     double inti_level[3];
     double GPA;
