@@ -2,6 +2,6 @@
 #define LIBRARY_H
 #include "universal.h"
 
-void garden(status* input_stat);
+void library(status* input_stat, int mood[3]);
 
 #endif

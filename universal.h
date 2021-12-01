@@ -15,4 +15,6 @@ struct status {
     std::string names[3];
 };
 
+
+
 #endif
