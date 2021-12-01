@@ -28,7 +28,6 @@ void cafe(status* input_stat, int mood){
   }
   int run = 1;
   while(run == 1){
-    if(data == 2){
       int sel;
       cout << " You selected to come to Cafeteria." << endl;
       cout << " In Cafeteria, there is a higher probability for Daisy to appear. Do you want to enter?" << endl;
@@ -145,6 +144,5 @@ void cafe(status* input_stat, int mood){
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 1;
         }
-      }
     }
   }
