@@ -55,14 +55,17 @@ void decision (status pass_stat, int pass_mood, bool *qt) {
     }
 }
 
-void execution(status current_stat) {
+void execution(status &current_stat) {
     //Random variable "mood" which can have 3 possible integers.
     //mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
     int mood;
     bool qt_flag = false;
 
     while (current_stat.date != 10) {
-        if (current_stat.time >= 3)
+        if (current_stat.time >= 3) {
+            current_stat.time = 0;
+            current_stat.date++;
+        }
         cout << endl;
         cout << "Day " << current_stat.date << " ";
         switch (current_stat.time)
@@ -99,7 +102,6 @@ void execution(status current_stat) {
         if (qt_flag == true) {
             break;
         }
-
         
     }
 }
