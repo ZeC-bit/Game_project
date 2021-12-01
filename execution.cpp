@@ -17,31 +17,25 @@ void decision (status pass_stat, int pass_mood, bool *qt) {
     cout << "[7] Quit game" << endl;
 
     int input;
-    bool correct_input = false;
     cin >> input;
+
     switch ( input )
     {
         case 1:
             library(&pass_stat, pass_mood);
-            correct_input = true;
             break;
         case 2:
             garden(&pass_stat, pass_mood);
-            correct_input = true;
             break;
         case 3:
             cafeteria(&pass_stat, pass_mood);
-            correct_input = true;
             break;
         case 4:
             lect(&pass_stat, pass_mood);
-            correct_input = true;
             break;
         case 5:
-            correct_input = true;
             break;
         case 7:
-            correct_input = true;
             cout << "See you again!";
             *qt = true;
             break;
@@ -55,15 +49,16 @@ void decision (status pass_stat, int pass_mood, bool *qt) {
     }
 }
 
-void execution(status &current_stat) {
+void execution(status current_stat) {
     //Random variable "mood" which can have 3 possible integers.
     //mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
     int mood;
     bool qt_flag = false;
-
+    status * cs_ptr = & current_stat;
+    
     while (current_stat.date != 10) {
         if (current_stat.time >= 3) {
-            current_stat.time = 0;
+            cs_ptr->time = 0;
             current_stat.date++;
         }
         cout << endl;

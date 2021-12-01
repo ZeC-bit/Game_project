@@ -60,7 +60,7 @@ int main() {
             continue;
         }
     }
-    execution(starting_stat);
+    execution(&starting_stat);
     
     return 0;
 }
