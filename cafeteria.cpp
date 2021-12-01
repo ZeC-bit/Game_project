@@ -12,7 +12,7 @@ using namespace std;
 // Iris = [0], Olivia = [1], Daisy = [2]
 
 
-void cafe(status* input_stat, int mood){
+void cafeteria(status* input_stat, int mood){
   char choose;
   int input;
   char name;
