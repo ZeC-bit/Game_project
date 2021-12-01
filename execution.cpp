@@ -62,6 +62,7 @@ void execution(status current_stat) {
     bool qt_flag = false;
 
     while (current_stat.date != 10) {
+        if (current_stat.time >= 3)
         cout << endl;
         cout << "Day " << current_stat.date << " ";
         switch (current_stat.time)
@@ -98,6 +99,7 @@ void execution(status current_stat) {
         if (qt_flag == true) {
             break;
         }
+
         
     }
 }
