@@ -26,15 +26,9 @@ void save_data(status stat_save)
     d_out.open(save_name.c_str());
     d_out << stat_save.name << endl << stat_save.date << endl << stat_save.time << endl << stat_save.location << endl;
     for (int i = 0; i != 3; i++) {
-        d_out << stat_save.aff_level[i] << endl << stat_save.int_level[i] << endl;
+        d_out << stat_save.affi_level[i] << endl << stat_save.inti_level[i] << endl;
     }
-    d_out << stat_save.GPA << endl << stat_save.health << endl;
+    d_out << stat_save.GPA << endl << stat_save.hp << endl;
     cout << "Your current progress has been saved at \"" << save_name << "!\"" << endl;
     d_out.close();
-}
-
-int main () {
-    status rand_stat = {"unkown", 1, 0, '\0', {1,2,3}, {1,2,}, 3.23, 3, {"Iris", "Olivia", "Daisy"}};
-    save_data(rand_stat);
-    return 0;
 }
