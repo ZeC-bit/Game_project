@@ -17,9 +17,19 @@ void cafe(status* input_stat, int* location){
   char choose;
   int input;
   char name;
+  double increment = 1;
+  double decrement = -1;
+  if (mood == 0){
+    decrement = -1.5;
+    increment = 0.8;
+  }
+  if (mood == 2) {
+    increment = 2;
+    decrement = -0.8;
+  }
   int run = 1;
   while(run == 1){
-    int  inti_lev; int affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
+    double inti_lev; double affi_lev; double input_stat->GPA; int input_stat->hp; int mood;
     if(init ==0){
       if(data == 2){
         int sel;
@@ -44,16 +54,16 @@ void cafe(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << "Olivia: life is hard cuz of too much of tests and assignments..." << endl;
-              input_stat->inti_level[1] += 1;
+              input_stat->inti_level[1] += increment;
             }
             else if(input == 2){
               cout << "Thank you for comforting me.." << endl;
-              input_stat->affi_level[1] += 1;
+              input_stat->affi_level[1] += increment;
             }
             else{
               cout << "(Nothing happens)" << endl;
-              input_stat->inti_level[1] -= 1;
-              input_stat->affi_level[1] -= 1;
+              input_stat->inti_level[1] -= decrement;
+              input_stat->affi_level[1] -= decrement;
             }
           }
           else if(Daisy_Appear > 70 && Daisy_Appear < 79){
@@ -66,12 +76,12 @@ void cafe(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << " Iris: (With impression) I liked this kind of flower..Thank you!!" << endl;
-              input_stat->affi_level[0] += 1;
+              input_stat->affi_level[0] += increment;
             }
             else if(input == 2){
               cout << " Iris: .... " << endl;
-              input_stat->inti_level[0] -= 1;
-              input_stat->affi_level[0] -= 1;
+              input_stat->inti_level[0] -= decrement;
+              input_stat->affi_level[0] -= decrement;
             }
             else{
               cout << " It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
@@ -88,16 +98,16 @@ void cafe(status* input_stat, int* location){
             cin >> input;
             if(input == 1){
               cout << " Daisy: (With impression) I liked this kind of flower..Thank you!!" << endl;
-              input_stat->affi_level[2] += 1;
+              input_stat->affi_level[2] += increment;
             }
             else if(input == 2){
               cout << " Daisy: .... " << endl;
-              input_stat->inti_level[2] -= 1;
-              input_stat->affi_level[2] -= 1;
+              input_stat->inti_level[2] -= decrement;
+              input_stat->affi_level[2] -= decrement;
             }
             else{
               cout << " It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
-              input_stat->inti_level[2] += 1;
+              input_stat->inti_level[2] += increment;
             }
           }
           }
