@@ -1,7 +1,7 @@
-#ifndef GARDEN.H
-#define GARDEN.H
+#ifndef GARDEN_H
+#define GARDEN_H
 #include "universal.h"
 
-void garden(status* input_stat, int* location);
+void garden(status* input_stat);
 
 #endif
