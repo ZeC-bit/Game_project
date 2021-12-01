@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #include "universal.h"
 #include "execution.h"
-#include "save_load.h"
+#include "library.h"
+#include "garden.h"
+#include "cafeteria.h"
+#include "lecture.h"
 
 using namespace std;
 
@@ -19,19 +22,19 @@ void decision (status pass_stat, int pass_mood[3], bool *qt) {
     switch ( input )
     {
         case 1:
-            libr(delivery, mood);
+            library(pass_stat, pass_mood[3]);
             correct_input = true;
             break;
         case 2:
-            garden(delivery, mood);
+            garden(pass_stat, pass_mood[3]);
             correct_input = true;
             break;
         case 3:
-            cafe(delivery, mood);
+            cafeteria(pass_stat, pass_mood[3]);
             correct_input = true;
             break;
         case 4:
-            lect(delivery, mood);
+            lect(pass_stat, pass_mood[3]);
             correct_input = true;
             break;
         case 5:
@@ -48,7 +51,7 @@ void decision (status pass_stat, int pass_mood[3], bool *qt) {
                 cin.clear();
                 cin.ignore(INT_MAX, '\n');
             }
-            decision(pass_stat, pass_mood, &*qt);
+            decision(pass_stat, &pass_mood[3], &*qt);
     }
 }
 
