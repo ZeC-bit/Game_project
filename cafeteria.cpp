@@ -100,6 +100,8 @@ void cafeteria(status* input_stat, int mood){
             input_stat->inti_level[0] += 1;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[0] -= 0.2;
+          input_stat->inti_level[0] -= 0.2;
         }
         // Random Chance of Olivia Appearing on the Cafeteria.
         else if(Daisy_Appear > 70 && Daisy_Appear < 90){
@@ -130,6 +132,8 @@ void cafeteria(status* input_stat, int mood){
             input_stat->inti_level[2] += increment;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[1] += 0.3;
+          input_stat->inti_level[1] += 0.3;
         }
           // Random Chance of Prof. Chim Appearing on the Cafeteria.
         else
@@ -168,15 +172,14 @@ void cafeteria(status* input_stat, int mood){
           input_stat->GPA -= 0.3;
         }
       else if(sel == 2){
-          cout << "Going back home. " << endl;
-          input_stat->hp -= 1;
+          cout << "Going back home... " << endl;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
-          input_stat->hp += 1;
+          input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
