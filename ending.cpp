@@ -35,8 +35,8 @@ void ending(status &stat_data){
     if(stat_data.affi_level[0] >= poly_flag && stat_data.affi_level[1] >= poly_flag && stat_data.affi_level[2] >= poly_flag)
     {
       cout << "------------------------------[POLYGAMY ENDING]------------------------------" << endl;
-      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! "; << endl;
-      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with "; << endl;
+      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! " << endl;
+      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with " << endl;
       cout << " Iris, Olivia, and Daisy!!! " << endl;
       cout << " You have gained All you wanted " << endl;
       cout << " Going outside the street, everyone is looking at you with three girl friends " << endl;
@@ -104,7 +104,7 @@ void ending(status &stat_data){
         cout << " Congratulations!!! IRIS has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
         cout << " with Iris!! ";
-        get char();
+        getchar();
         cout << " Since Iris is in the dean's list, she will help you with your academic support as well!" << endl;
         cout << " This Christmas, you have gained both love as well as GPA..." << endl;
         cout << " What a Successful Ending!!!" << endl;
@@ -314,7 +314,7 @@ void ending(status &stat_data){
     }
     else if( stat_data.GPA > good_student_flag)
     {
-      cout << "------------------------------[Hidden Ending revealed!]------------------------------"
+      cout << "------------------------------[Hidden Ending revealed!]------------------------------" << endl;
       cout << "--------------------------------[Dean's List Ending]---------------------------------" << endl;
       cout << " Great!!! You have obtained the Honor of Dean's List!! " << endl;
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
