@@ -34,7 +34,7 @@ Throughout the story, the player will face different types of people depending o
 2.  Data structures for storing game status:  
 By bringing up the progress file which has been saved by the each of the player’s game status, the player can load the game. When the game has been started, the data of the player will be moved to the Game_data structure, which will be used throughout the game process.
 
-3.  Dynamic memory management 
+3.  Dynamic memory management: 
 We will make arrays for affinity level, and intimacy level that depend on which characters you meet. Based on the choices you make, particular affinity level or intimacy level will vary. Different indices of affinity level, and intimacy level arrays will contain different information for each NPC.
 
 4.	Continue (File input/output): 

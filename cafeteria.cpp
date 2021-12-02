@@ -15,6 +15,10 @@ using namespace std;
 // Perid of the day ==> 1. morning 2. afternoon 3. evening
 // Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Array number for the characters are Iris = [0], Olivia = [1], Daisy = [2]
+// Cafeteria function creates the location of Student Cafeteria. The inputs of the function is
+// the address of status structure. The outputs of the function is the increment or decrement of each of the
+// intimacy level, affinity level, GPA, sun which is the time phases, and hp which is health point
+// according to the user's options.
 void cafeteria(status* input_stat, int mood){
   char choose;
   int input;

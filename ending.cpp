@@ -10,7 +10,9 @@ using namespace std;
 // Perid of the day ==> 1. morning 2. afternoon 3. evening
 // Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
-
+// The ending function will be resumed after the last day that the user inserted
+// at the beginning. It creates the diverse endings with Polygamy Ending, Girl Friend Ending,
+// Best Friend Ending, Dean' List Ending, and Solo Ending.
 void ending(status &stat_data){
   int run = 1;
   double poly_flag = 6;
@@ -341,7 +343,6 @@ void ending(status &stat_data){
       cout << " Today's sorrow will be the seed for tomorrow's bright victory" << endl;
       cout << " Lonely programmer, one day, you will shine brightly" << endl;
       cout << " We present this game for those who have discovered this ending" << endl;
-
       cout << setw(55) << " Thank you for playing this Game!!" << endl;
       cout << setw(45) << " CREDITS TO " << endl;
       cout << setw(47) << " PARK HYEON BEOM " << endl;
