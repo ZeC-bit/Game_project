@@ -74,6 +74,8 @@ void library(status* input_stat, int mood){
             input_stat->affi_level[0] += decrement;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[0] -= 0.2;
+          input_stat->inti_level[0] -= 0.2;
         }
         //Daisy Appears on the Library
         else if(Iris_Appear > 50 && Iris_Appear < 69){
@@ -111,7 +113,7 @@ void library(status* input_stat, int mood){
         else if(Iris_Appear > 70 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
           cout << " Hi, I'm Olivia. " << endl;
-          cout << " I am living in Starr Hall, and your roommate!! " << endl;
+          cout << " I am living in Starr Hall, and your hall mate!! " << endl;
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
           cout << " But, you came to the library. " << endl;
@@ -137,6 +139,8 @@ void library(status* input_stat, int mood){
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[1] += 0.3;
+          input_stat->inti_level[1] += 0.3;
         }
         // Prof Chim appears on the Library
         else
@@ -175,15 +179,14 @@ void library(status* input_stat, int mood){
         input_stat->GPA += 0.5;
       }
       else if(sel == 2){
-          cout << "Going back home. " << endl;
-          input_stat->hp -= 1;
+          cout << "Going back home... " << endl;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
-          input_stat->hp += 2;
+          input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
