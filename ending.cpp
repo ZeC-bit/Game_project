@@ -51,7 +51,7 @@ void ending(status &stat_data){
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
         cout << setw(45) << " CREDITS TO " << endl;
         cout << setw(50) << " PARK HYEON BEOM " << endl;
-        cout << setw(50) << " LEE SEUNG HUN" << endl;
+        cout << setw(50) << " LEE SEUNG HUN " << endl;
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
       else if(affi_largest == stat_data.affi_level[1])
@@ -61,7 +61,7 @@ void ending(status &stat_data){
         cout << " Coming Christmas, you are not alone!! You are going to have a happy time with Olivia!!! " << endl;
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
-      else
+      else 
       {
         cout << "------------------------------[Daisy ENDING]----------------------------------" << endl;
         cout << " Congratulations!!! Daisy has fallen love with you!!!! "<< endl;
@@ -80,7 +80,7 @@ void ending(status &stat_data){
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
         cout << setw(45) << " CREDITS TO " << endl;
         cout << setw(50) << " PARK HYEON BEOM " << endl;
-        cout << setw(50) << " LEE SEUNG HUN" << endl;
+        cout << setw(50) << " LEE SEUNG HUN " << endl
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
       else if(inti_largest == stat_data.inti_level[1])
@@ -92,7 +92,7 @@ void ending(status &stat_data){
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
         cout << setw(45) << " CREDITS TO " << endl;
         cout << setw(50) << " PARK HYEON BEOM " << endl;
-        cout << setw(50) << " LEE SEUNG HUN" << endl;
+        cout << setw(50) << " LEE SEUNG HUN " << endl;
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
       else
@@ -104,7 +104,7 @@ void ending(status &stat_data){
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
         cout << setw(45) << " CREDITS TO " << endl;
         cout << setw(50) << " PARK HYEON BEOM " << endl;
-        cout << setw(50) << " LEE SEUNG HUN" << endl;
+        cout << setw(50) << " LEE SEUNG HUN " << endl;
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
     }
