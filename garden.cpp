@@ -71,6 +71,9 @@ void garden(status* input_stat, int mood){
           cout<< "Iris appears on the Garden" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           getchar();
+          cout << "Stressed out due to excessive amount of assignments and examinations," << endl;
+          cout << "You went to Garden to chill. And you found Iris crying on the bench. " << endl;
+          getchar();
           cout << " 1. Take the flower to give her " << endl;
           cout << " 2. Since you consider every living thing a precious one, you keep walking to the garden " << endl;
           cout << " 3. Buy an Oreo Ice cream to her and walk with her on the Garden " << endl;
