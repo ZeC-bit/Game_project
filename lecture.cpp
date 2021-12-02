@@ -41,6 +41,7 @@ void lect(status* input_stat, int mood){
       if(sel ==1){
         srand(time(0));
         int Chim_Appear = rand() % 100;
+        // Random Chance of Prof. Chim Appearing on the Lecture Room.
         if(Chim_Appear < 50){
           cout << " Prof. T. W. Chim appears on the Lecture Room. " << endl;
           getchar();
@@ -71,6 +72,7 @@ void lect(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+        // Random Chance of Iris Appearing on the Lecture Room.
         else if(Chim_Appear > 50 && Chim_Appear < 69){
           cout<< "Iris appears on the Lecture Room. " << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
@@ -98,6 +100,7 @@ void lect(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+          // Random Chance of Olivia Appearing on the Lecture Room.
         else if(Chim_Appear > 70 && Chim_Appear < 90){
           cout<< "Olivia appears on the Lecture Room. " << endl;
           cout << " Hi, I'm Olivia. " << endl;
@@ -125,6 +128,7 @@ void lect(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+          // Random Chance of Daisy Appearing on the Lecture Room.
         else
         {
           cout << "Daisy appears on the Lecture Room. " << endl;
