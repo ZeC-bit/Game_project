@@ -8,7 +8,10 @@
 
 
 using namespace std;
-
+// This function takes the addresses of dummy username (string) and dummy game length (int) from the main function as inputs
+// then, take inputs from the user and modify the values
+// This is possible because they are pointer variables
+// Also, runs the tutorial for the user that play the game for the first time
 void introduction(string *name, int *game_len) {
     cout << "Hey there!\n";
     cout << "Can you tell me your name?\n";
@@ -30,7 +33,7 @@ void introduction(string *name, int *game_len) {
             cout << "Wrong input!" << endl << "Please choose again.\n";
             while (cin.fail()) {
                 cin.clear();
-                cin.ignore(INT_MAX, '\n');
+                cin.ignore(INT8_MAX, '\n');
             }
             cin >> inpu;
         }
@@ -52,6 +55,14 @@ void introduction(string *name, int *game_len) {
     getchar();
 }
 
+// This is the main function of our program
+// Sets out a 'status' structure variable called starting_stat with dummy names and game length
+// This structure is used to store values for game status
+// which will be replaced by either user input (if playing for the first time) or loaded data from save file
+// Then, the structure variable is passed to our execution file
+// After execution file is completed somehow, it returns 0 and the program finishes
+// For better memory management of computers, we did not implemete exit sequences other than coming back to the main function and returning 0.
+// Whether the user reached the ending, chose quit button, ran out of HP, the execution file will direct back to the main function and return 0.
 int main() {
     status starting_stat = {5, "unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 5, {"Iris", "Olivia", "Daisy"}};
     cout << endl << endl;
@@ -89,7 +100,7 @@ int main() {
             cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
             while (cin.fail()) {
                 cin.clear();
-                cin.ignore(INT_MAX, '\n');
+                cin.ignore(INT8_MAX, '\n');
             }
             cin >> starter;
         }
