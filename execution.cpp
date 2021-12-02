@@ -65,18 +65,10 @@ void execution(status stat_in) {
     bool qt_flag = false;
 
     
-    //When you hit 'Day 10', ending sequence will begin
-    while (current_stat.date != 10) {
-        // A 'Day' consists of morning, afternoon and evening
-        // After evening, day is increased by one and it goes back to morning
-        // To change the values from the input status, we used pointer variable
-        status *cs_ptr = & current_stat;
-        if (current_stat.sun >= 3) {
-            (*cs_ptr).sun = 0;
-            (*cs_ptr).date++;
-        }
-        cout << endl;
+    //When the date hits the length set by user, ending sequence will begin
+    while (current_stat.date <= current_stat.game_length) {
 
+        cout << endl;
         //Displaying current status to the screen
         cout << "Day " << current_stat.date << " ";
         switch (current_stat.sun)
@@ -116,6 +108,19 @@ void execution(status stat_in) {
 
         getchar();
         decision(current_stat, mood, &qt_flag);
+        // A 'Day' consists of morning, afternoon and evening
+        // After evening, day is increased by one and it goes back to morning
+        // To change the values from the input status, we used pointer variable
+        status *cs_ptr = & current_stat;
+        if (current_stat.sun >= 3) {
+            (*cs_ptr).sun = 0;
+            (*cs_ptr).date++;
+            (*cs_ptr).hp++;
+            (*cs_ptr).affi_level[1] += 0.25;
+            (*cs_ptr).affi_level[0] -= 0.15;
+            (*cs_ptr).inti_level[1] += 0.20;
+            (*cs_ptr).inti_level[0] -= 0.15;
+        }
 
         // This is when you do not care about maintaining health in the game
         // when the hp hits 0, exit switch is turned on
@@ -131,6 +136,11 @@ void execution(status stat_in) {
             break;
         }
 
+        //Limiter for GPA value
+        if (current_stat.GPA > 4.3) {
+            cs_ptr->GPA = 4.3;
+        }
+
         // During the game, if the exit switch is turned on during interaction,
         // the game will end
         if (qt_flag == true) {
@@ -138,9 +148,13 @@ void execution(status stat_in) {
         }
         
     }
-    if (current_stat.date >= 10) {
-        cout << "Day 10" << endl;
+    if (current_stat.date > current_stat.game_length) {
+
+        cout << endl;
+        cout << "Day " << current_stat.game_length + 1 << ", It's finally Christmas Eve..." << endl;
+        getchar();
         ending(current_stat);
     }
-    //return to main function
+    // After ending sequence
+    // return to main function
 }
