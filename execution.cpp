@@ -12,13 +12,16 @@
 
 using namespace std;
 // This is a function that will receive user's next action
-// and pass the current data to the corresponding location functions
+// As inputs, it receives the status, mood, quit switch from execution function 
+// and passes them as outputs to our location functions for further operation.
+// If user decides to quit, it will turn the quit switch on and go back to main function for return 0
+
 void decision (status& pass_stat, int pass_mood, bool *qt) {
     cout << "What are you up to?" << endl;
     cout << "[1] Go to library [2] Go to garden [3] Go to cafeteria" << endl;
     cout << "[4] Go to lecture room [5] Save progress [6] Load data" << endl;
     cout << "[7] Quit game" << endl;
-
+    cout << "Your choice: ";
     int input;
     cin >> input;
 
@@ -50,7 +53,7 @@ void decision (status& pass_stat, int pass_mood, bool *qt) {
             cout << "Wrong input!\n";
             while (cin.fail()) {
                 cin.clear();
-                cin.ignore(INT_MAX, '\n');
+                cin.ignore(INT8_MAX, '\n');
             }
             decision(pass_stat, pass_mood, &*qt);
     }
@@ -71,6 +74,7 @@ void execution(status stat_in) {
         cout << endl;
         //Displaying current status to the screen
         cout << "Day " << current_stat.date << " ";
+
         switch (current_stat.sun)
         {
             case 0:
@@ -108,14 +112,23 @@ void execution(status stat_in) {
 
         getchar();
         decision(current_stat, mood, &qt_flag);
+        // After returning from decision function -> location functions
+        // some values may have changed and require some manipulation
+
         // A 'Day' consists of morning, afternoon and evening
-        // After evening, day is increased by one and it goes back to morning
+        // After evening action, day is increased by one and it goes back to morning
+
         // To change the values from the input status, we used pointer variable
         status *cs_ptr = & current_stat;
         if (current_stat.sun >= 3) {
             (*cs_ptr).sun = 0;
             (*cs_ptr).date++;
             (*cs_ptr).hp++;
+            // Here we actually have different difficulty levels for different characters.
+            // Iris ending will be difficult to attain, as the affinity and intimacy levels 
+            // decreases by small increments everyday
+            // On the other hand, Olivia ending is easier to attain, as affinity and intimacy
+            // increases everyday
             (*cs_ptr).affi_level[1] += 0.25;
             (*cs_ptr).affi_level[0] -= 0.15;
             (*cs_ptr).inti_level[1] += 0.20;
@@ -125,6 +138,7 @@ void execution(status stat_in) {
         // This is when you do not care about maintaining health in the game
         // when the hp hits 0, exit switch is turned on
         if (current_stat.hp <= 0) {
+            cout << endl;
             cout << "Your Health became too bad and you earned yourself cancer.\n";
             getchar();
             getchar();
@@ -136,7 +150,7 @@ void execution(status stat_in) {
             break;
         }
 
-        //Limiter for GPA value
+        //Limiting the GPA value
         if (current_stat.GPA > 4.3) {
             cs_ptr->GPA = 4.3;
         }
@@ -146,15 +160,13 @@ void execution(status stat_in) {
         if (qt_flag == true) {
             break;
         }
-        
     }
     if (current_stat.date > current_stat.game_length) {
-
         cout << endl;
         cout << "Day " << current_stat.game_length + 1 << ", It's finally Christmas Eve..." << endl;
         getchar();
         ending(current_stat);
+        // After ending sequence
+        // return to main function
     }
-    // After ending sequence
-    // return to main function
 }
