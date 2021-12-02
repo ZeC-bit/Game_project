@@ -73,7 +73,7 @@ void lect(status* input_stat, int mood){
           }
         }
         // Random Chance of Iris Appearing on the Lecture Room.
-        else if(Chim_Appear > 50 && Chim_Appear < 69){
+        else if(Chim_Appear >= 50 && Chim_Appear <= 69){
           cout<< "Iris appears on the Lecture Room. " << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           cout << " While you were studying hard, Iris said “I want to go to the Ocean Park.” " << endl;
@@ -99,8 +99,6 @@ void lect(status* input_stat, int mood){
             input_stat->affi_level[0] += increment;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[0] -= 0.2;
-          input_stat->inti_level[0] -= 0.2;
         }
           // Random Chance of Olivia Appearing on the Lecture Room.
         else if(Chim_Appear > 70 && Chim_Appear < 90){
@@ -129,8 +127,6 @@ void lect(status* input_stat, int mood){
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[1] += 0.3;
-          input_stat->inti_level[1] += 0.3;
         }
           // Random Chance of Daisy Appearing on the Lecture Room.
         else
