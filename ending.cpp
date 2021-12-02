@@ -35,11 +35,13 @@ void ending(status &stat_data){
     if(stat_data.affi_level[0] >= poly_flag && stat_data.affi_level[1] >= poly_flag && stat_data.affi_level[2] >= poly_flag)
     {
       cout << "------------------------------[POLYGAMY ENDING]------------------------------" << endl;
-      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! ";
-      getchar();
-      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with ";
-      getchar();
+      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! "; << endl;
+      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with "; << endl;
       cout << " Iris, Olivia, and Daisy!!! " << endl;
+      cout << " You have gained All you wanted " << endl;
+      cout << " Going outside the street, everyone is looking at you with three girl friends " << endl;
+      cout << " Then, You start to laugh out loud "
+      cout << " What a Successful Ending!!! " << endl;
       cout << " ";
       cout << stat_data.names[0] << " Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0];
       getchar();
@@ -101,7 +103,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[IRIS ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! IRIS has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Iris!! " << endl;
+        cout << " with Iris!! ";
+        get char();
         cout << " Since Iris is in the dean's list, she will help you with your academic support as well!" << endl;
         cout << " This Christmas, you have gained both love as well as GPA..." << endl;
         cout << " What a Successful Ending!!!" << endl;
@@ -154,7 +157,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Olivia!! " << endl;
+        cout << " with Olivia!! ";
+        getchar();
         cout << " As Olivia is your roommate who is one of the members in Hall Readmission, " << endl;
         cout << " You have greater chance for getting readmitted for the next year and so on..!!" << endl;
         cout << " This Christmas, You have gained both love as well as readmission for your University Life!! " << endl;
@@ -208,7 +212,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl;
+        cout << " with Daisy!! ";
+        getchar();
         cout << " Since Daisy is your high school class mate as well as a super rich,  " << endl;
         cout << " You went to Cruise Travelling in Europe this Christmas and had a wonderful time there!!!" << endl;
         cout << " This Christmas, You have gained both love as well as money !!" << endl;
