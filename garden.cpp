@@ -7,10 +7,14 @@
 #include "garden.h"
 #include "universal.h"
 using namespace std;
-// play.day
-//play.period ==> 1. morning 2. afternoon 3. evening
-//play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
-// Iris = [0], Olivia = [1], Daisy = [2]
+//Inputs of the function are struct Status. The affinity level, intimacy level, GPA, and
+//Health points are stored in the structure. Throughout the process of the game, the data stored
+//Status Structure will be continuously modified where they are set as pointer variables.
+//Mood Variable shows the mood of the characters where it affects on the increment and decrement of
+//Affinity level and intimacy level. Mood Variable comes out with random probabilities with scale of 0 to 2.
+// Perid of the day ==> 1. morning 2. afternoon 3. evening
+// Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
+// Array number for the characters are Iris = [0], Olivia = [1], Daisy = [2]
 void garden(status* input_stat, int mood){
   char choose;
   int input;
@@ -71,6 +75,9 @@ void garden(status* input_stat, int mood){
           cout<< "Iris appears on the Garden" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           getchar();
+          cout << "You discovered a beautiful flower on the way to the Garden. " << endl;
+          cout << "You remember that Iris likes flower" << endl;
+          getchar();
           cout << " 1. Take the flower to give her " << endl;
           cout << " 2. Since you consider every living thing a precious one, you keep walking to the garden " << endl;
           cout << " 3. Buy an Oreo Ice cream to her and walk with her on the Garden " << endl;
@@ -96,6 +103,9 @@ void garden(status* input_stat, int mood){
         else if(Olivia_Appear > 70 && Olivia_Appear < 90){
           cout << "Daisy appears on the Garden" << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
+          getchar();
+          cout << " You discovered a beautiful flower on the way to the Garden. " << endl;
+          cout << " You remember that Daisy likes flower " << endl;
           getchar();
           cout << " 1. Take the flower to give her " << endl;
           cout << " 2. Since you consider every living thing a precious one, you keep walking to the garden " << endl;
