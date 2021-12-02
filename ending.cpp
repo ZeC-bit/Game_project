@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "universal.h"
 using namespace std;
+
 // Ending file has diverse types of Endings with Pologamy Ending, Girl Friend Ending,
 // Best Friend Ending, Dean's List Ending, and lastly Solo Ending.
 // Perid of the day ==> 1. morning 2. afternoon 3. evening
