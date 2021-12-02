@@ -12,7 +12,7 @@ using namespace std;
 //Health points are stored in the structure. Throughout the process of the game, the data stored
 //Status Structure will be continuously modified where they are set as pointer variables.
 //Mood Variable shows the mood of the characters where it affects on the increment and decrement of
-//Affinity level and intimacy level. Mood Variable comes out with random probabilities with scale of 0 to 2. 
+//Affinity level and intimacy level. Mood Variable comes out with random probabilities with scale of 0 to 2.
 // Perid of the day ==> 1. morning 2. afternoon 3. evening
 // Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Array number for the characters are Iris = [0], Olivia = [1], Daisy = [2]
