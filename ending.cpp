@@ -280,7 +280,7 @@ void ending(status &stat_data){
         cout << " Coming Christmas, you are not alone!!! You are going to make a Christmas Tree " << endl;
         cout << " with Iris!! " << endl;
         cout << " Iris is your Best Friend! You can get help for assignments if you get stucked " << endl;
-        cout << " "
+        cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
