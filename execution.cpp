@@ -10,7 +10,8 @@
 #include "save_load.h"
 
 using namespace std;
-
+// This is a function that will receive user's next action
+// and pass the current data to the corresponding location functions
 void decision (status& pass_stat, int pass_mood, bool *qt) {
     cout << "What are you up to?" << endl;
     cout << "[1] Go to library [2] Go to garden [3] Go to cafeteria" << endl;
@@ -54,20 +55,28 @@ void decision (status& pass_stat, int pass_mood, bool *qt) {
     }
 }
 
-void execution(status& stat_in) {
+void execution(status stat_in) {
     status current_stat = stat_in;
-    //Random variable "mood" which can have 3 possible integers.
-    //mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
-    int mood;
+    // qt_flag is a 'switch' for terminating the program
+    // when qt_flag becomes true, the execution function is terminated
+    // when execution function is terminated, it goes back to the main function
+    // and the main function will return 0
     bool qt_flag = false;
-    status *cs_ptr = & current_stat;
+
     
+    //When you hit 'Day 10', ending sequence will begin
     while (current_stat.date != 10) {
+        // A 'Day' consists of morning, afternoon and evening
+        // After evening, day is increased by one and it goes back to morning
+        // To change the values from the input status, we used pointer variable
+        status *cs_ptr = & current_stat;
         if (current_stat.sun >= 3) {
             (*cs_ptr).sun = 0;
             (*cs_ptr).date++;
         }
         cout << endl;
+
+        //Displaying current status to the screen
         cout << "Day " << current_stat.date << " ";
         switch (current_stat.sun)
         {
@@ -85,6 +94,7 @@ void execution(status& stat_in) {
             cout << endl;
         }
         cout << "Health Point : " << current_stat.hp << "   " << "GPA : " << current_stat.GPA << endl;
+        getchar();
         if (current_stat.sun == 0) {
             cout << "Good morning " << current_stat.name << "!" << endl;
         }
@@ -95,11 +105,18 @@ void execution(status& stat_in) {
             cout << "Good evening " << current_stat.name << "!" << endl;
         }
         
-        if (current_stat.date != 5) {
-            srand(time(0));
-            mood = rand() % 3;
-            decision(current_stat, mood, &qt_flag);
-        }
+        // Random variable "mood" which can have 3 possible integers.
+        // mood represents the mood of characters you will encounter
+        // mood will have an effect on the increment and decrement when you interact with characters
+        // mood 0 means bad atmosphere, mood 1 means moderate atmosphere, mood 2 means good atmosphere.
+        int mood;
+        srand(time(0));
+        mood = rand() % 3;
+
+        decision(current_stat, mood, &qt_flag);
+
+        // This is when you do not care about maintaining health in the game
+        // when the hp hits 0, exit switch is turned on
         if (current_stat.hp <= 0) {
             cout << "Your Health became too bad and you earned yourself cancer.\n";
             getchar();
@@ -111,9 +128,17 @@ void execution(status& stat_in) {
             qt_flag = true;
             break;
         }
+
+        // During the game, if the exit switch is turned on during interaction,
+        // the game will end
         if (qt_flag == true) {
             break;
         }
         
     }
+    if (current_stat.date >= 10) {
+        cout << "Day 10" << endl;
+        ending(&current_stat);
+    }
+    //return to main function
 }
