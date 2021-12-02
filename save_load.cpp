@@ -57,6 +57,9 @@ int num_space(string target) {
     return space;
 }
 
+// This takes the address of status variable as input to implement a pointer variable
+// If the user actually do not want to load, returns the status variable without modification
+// same goes when file opening is failed
 status load_data (status *stat_ptr) {
     string fork;
     cout << endl;
@@ -84,8 +87,8 @@ status load_data (status *stat_ptr) {
             return *stat_ptr;
         }
         else {
+            //create a container string and augment file contents to it
             string container = "", line_in;
-            // transfer all lines from file to a string container first
             // with a delimiter " "
             while(getline(d_in,line_in)) {
                 container += line_in;
@@ -93,7 +96,7 @@ status load_data (status *stat_ptr) {
             }
             // cut the container word by word and transfer to the status components with their appropriate type
             int posi;
-            // dynamic array depending on the number of lines from file, that will store lines
+            // Create a dynamic array depending on the number of lines in the file
             int num_spc = num_space(container);
             string * fedex = new string [num_spc];
             for (int index = 0; index < num_spc; index++) {
