@@ -11,7 +11,7 @@ void save_data(status stat_save)
     string fork;
     cout << "Do you want to save current progress?\n";
     getchar();
-    cout << "Press 'n' if you do not wish to save.";
+    cout << "Press 'n' if you do not wish to save.\n";
 
     // Check again just in case
     fork = getchar();
@@ -19,8 +19,9 @@ void save_data(status stat_save)
         cout << "Going back home";
     }
     else {
+        cout << endl;
         cout << "Enter name for your new save file.\n";
-        cout << "(without \".txt\"");
+        cout << "(without \".txt\")\n";
         cout << "(Caution: If you write an existing file name, all data will be overwritten!)\n";
         
         ofstream d_out;
@@ -58,8 +59,9 @@ int num_space(string target) {
 
 status load_data (status *stat_ptr) {
     string fork;
+    cout << endl;
     cout << "Do you want to load data from previous progress?\n";
-    cout << "Press 'n' if you do not wish to load.";
+    cout << "Press 'n' if you do not wish to load.\n";
     
     fork = getchar();
     if (fork == "n" || fork == "N") {
@@ -92,11 +94,12 @@ status load_data (status *stat_ptr) {
             // cut the container word by word and transfer to the status components with their appropriate type
             int posi;
             // dynamic array depending on the number of lines from file, that will store lines
-            string * fedex = new string [num_space(container)];
-            for (int index = 0; index < num_space(container); index++) {
+            int num_spc = num_space(container);
+            string * fedex = new string [num_spc];
+            for (int index = 0; index < num_spc; index++) {
                 posi = container.find(' ');
-                fedex[index] = container.substr(0, posi - 1);
-                container = container.erase(0, posi);
+                fedex[index] = container.substr(0, posi);
+                container = container.erase(0, posi + 1);
             }
             stat_ptr->name = fedex[0];
             stat_ptr->date = stoi(fedex[1]);
