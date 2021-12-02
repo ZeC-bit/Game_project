@@ -151,8 +151,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Olivia!! " << endl
-        cout << " "
+        cout << " with Olivia!! " << endl;
+        cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -201,8 +201,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl
-        cout << " "
+        cout << " with Daisy!! " << endl;
+        cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -252,8 +252,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl
-        cout << " "
+        cout << " with Daisy!! " << endl;
+        cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -336,8 +336,8 @@ void ending(status &stat_data){
         cout << "--------------------------------[BEST FRIEND DAISY ENDING]--------------------------------" << endl;
         cout << " Well Played!!! Daisy has become your best friend!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to make a Christmas Tree " << endl;
-        cout << " with Daisy!! " << endl
-        cout << " "
+        cout << " with Daisy!! " << endl;
+        cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -347,9 +347,9 @@ void ending(status &stat_data){
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
     }
-    else if(gpa > good_student_flag)
+    else if(stat_data.GPA > good_student_flag)
     {
-      cout << "------------------------------[Hidden Ending revealed!]------------------------------"
+      cout << "------------------------------[Hidden Ending revealed!]------------------------------";
       cout << "--------------------------------[Dean's List Ending]---------------------------------" << endl;
       cout << " Great!!! You have obtained the Honor of Dean's List!! " << endl;
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -373,7 +373,7 @@ void ending(status &stat_data){
       cout << " Coming Christmas, SADLY, you are alone..... " << endl;
       cout << " Don't Get Frustrated!! You Still have Chance!!  " << endl;
       cout << " Try to be more Romantic Next Time!! " << endl;
-      cout << " "
+      cout << " ";
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
       cout << setw(55) << " Thank you for playing this Game!!" << endl;
       cout << setw(45) << " CREDITS TO " << endl;
