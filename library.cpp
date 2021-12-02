@@ -8,6 +8,7 @@
 #include "library.h"
 #include "universal.h"
 using namespace std;
+
 //Inputs of the function are struct Status. The affinity level, intimacy level, GPA, and
 //Health points are stored in the structure. Throughout the process of the game, the data stored
 //Status Structure will be continuously modified where they are set as pointer variables.
@@ -59,17 +60,20 @@ void library(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Iris: Please don't fight...(But you made him silent) " << endl;
+            cout << " Iris: Please don't fight...(But you made him silent) ";
+            getchar();
             input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Iris: Thank you for your courage! " << endl;
+            cout << " Iris: Thank you for your courage! ";
+            getchar();
             input_stat->affi_level[0] += increment;
             input_stat->sun += 1;
           }
           else{
-            cout << " (Iris's face seems disappointed) " << endl;
+            cout << " (Iris's face seems disappointed) ";
+            getchar();
             input_stat->inti_level[0] += decrement;
             input_stat->affi_level[0] += decrement;
             input_stat->sun += 1;
@@ -91,18 +95,21 @@ void library(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Daisy: I can't wait till the end of the exams...But have too much things to do.. " << endl;
+            cout << " Daisy: I can't wait till the end of the exams...But have too much things to do.. ";
+            getchar();
             input_stat->inti_level[2] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Daisy: (Sleeping)..... " << endl;
+            cout << " Daisy: (Sleeping)..... ";
+            getchar();
             input_stat->inti_level[2] += decrement;
             input_stat->affi_level[2] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " Daisy: Thank you so much!! I feel so fresh now!! " << endl;
+            cout << " Daisy: Thank you so much!! I feel so fresh now!! ";
+            getchar();
             input_stat->affi_level[2] += increment;
             input_stat->sun += 1;
           }
@@ -122,18 +129,21 @@ void library(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Olivia: I can't wait till the end of the exams...But have too much things to do.. " << endl;
+            cout << " Olivia: I can't wait till the end of the exams...But have too much things to do.. ";
+            getchar();
             input_stat->inti_level[1] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Olivia: (Sleeping)..... " << endl;
+            cout << " Olivia: (Sleeping)..... ";
+            getchar();
             input_stat->inti_level[1] += decrement;
             input_stat->affi_level[1] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " Olivia: Thank you so much!! I feel so fresh now!! " << endl;
+            cout << " Olivia: Thank you so much!! I feel so fresh now!! ";
+            getchar();
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
@@ -154,19 +164,22 @@ void library(status* input_stat, int mood){
     	    cin >> input;
     	    if(input == 1)
     	    {
-    	      cout << "Wrong! You have lost 0.5 GPA points" << endl;
+    	      cout << "Wrong! You have lost 0.5 GPA points";
+            getchar();
     	      input_stat->GPA += 0.5;
             input_stat->sun += 1;
     	    }
     	    else if(input ==2)
     	    {
-    	      cout << "Correct!!! You have gained 0.5 GPA points" << endl;
+    	      cout << "Correct!!! You have gained 0.5 GPA points";
+            getchar();
     	      input_stat->GPA += 0.5;
             input_stat->sun += 1;
     	    }
     	    else
     	    {
-    	      cout << "Wrong! You have lost 0.5 GPA points" << endl;
+    	      cout << "Wrong! You have lost 0.5 GPA points";
+            getchar();
     	      input_stat->GPA += 0.5;
             input_stat->sun += 1;
     	    }
@@ -175,13 +188,15 @@ void library(status* input_stat, int mood){
         input_stat->GPA += 0.25;
       }
       else if(sel == 2){
-          cout << "Going back home... " << endl;
+          cout << "Going back home... ";
+          getchar();
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
-          cout << " By playing badminton you can gain health point per match! " << endl;
+          cout << " By playing badminton you can gain health point per match! ";
+          getchar();
           input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
