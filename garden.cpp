@@ -70,11 +70,9 @@ void garden(status* input_stat, int mood){
             input_stat->affi_level[1] += decrement;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[1] += 0.3;
-          input_stat->inti_level[1] += 0.3;
         }
     // Random Chance of Iris Appearing on the Garden.
-        else if(Olivia_Appear > 50 && Olivia_Appear < 69){
+        else if(Olivia_Appear >= 50 && Olivia_Appear <= 69){
           cout<< "Iris appears on the Garden" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           getchar();
@@ -102,11 +100,9 @@ void garden(status* input_stat, int mood){
             input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[0] -= 0.2;
-          input_stat->inti_level[0] -= 0.2;
         }
             // Random Chance of Daisy Appearing on the Garden.
-        else if(Olivia_Appear > 70 && Olivia_Appear < 90){
+        else if(Olivia_Appear >= 70 && Olivia_Appear < 90){
           cout << "Daisy appears on the Garden" << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
           getchar();
@@ -146,9 +142,9 @@ void garden(status* input_stat, int mood){
           getchar();
           cout << " Guess if you do not know the answer. Which of the following is valid command or editor " << endl;
           cout << " that allow you to show the content of a file in Linux/Unix? " << endl;
-          cout << "1.	vi" << endl;
-          cout << "2. show" << endl;
-          cout << "3.	get" << endl;
+          cout << "1.	 vi" << endl;
+          cout << "2.  show" << endl;
+          cout << "3.	 get" << endl;
           cin >> input;
           if(input == 1)
           {
@@ -170,7 +166,7 @@ void garden(status* input_stat, int mood){
           }
         }
           input_stat->hp -= 1;
-          input_stat->GPA -= 0.3;
+          input_stat->GPA -= 0.1;
         }
       else if(sel == 2){
           cout << "Going back home... " << endl;
