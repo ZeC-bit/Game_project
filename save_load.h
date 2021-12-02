@@ -4,5 +4,6 @@
 
 
 void save_data(status stat_save);
+status load_data(status *stat_ptr);
 
 #endif
