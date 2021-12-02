@@ -12,16 +12,18 @@ using namespace std;
 void introduction(string *name) {
     cout << "Hey there!\n";
     cout << "Can you tell me your name?\n";
-    cin >> *name;
+    string deli;
+    cin >> deli;
+    *name = deli;
     cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
     getchar();
     cout << "Whether it be your GPA, friends, or lover.";
     getchar();
     cout << "Here, you can find what is lacking in your university life.\n";
     getchar();
-    cout << "Today is December 15, XXXX.";
+    cout << "Today is December 19, XXXX.";
     getchar();
-    cout << "You have 9 days until Christmas Eve.";
+    cout << "You have 5 days until Christmas Eve.";
     getchar();
     cout << "What you will be doing on Christmas Eve,";
     getchar();
@@ -33,7 +35,7 @@ void introduction(string *name) {
 }
 
 int main() {
-    status starting_stat = {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
+    status starting_stat = {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 5, {"Iris", "Olivia", "Daisy"}};
     cout << endl << endl;
     cout << "HB and King SH presents" << endl;
     getchar();

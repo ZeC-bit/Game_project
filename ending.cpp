@@ -12,10 +12,10 @@ using namespace std;
 // Iris = [0], Olivia = [1], Daisy = [2]
 void ending(status &stat_data){
   int run = 1;
-  int poly_flag;
-  int love_flag;
-  int friend_flag;
-  int good_student_flag;
+  double poly_flag = 6;
+  double love_flag = 10;
+  double friend_flag = 6.5;
+  double good_student_flag = 4;
 
   int affi_largest = stat_data.affi_level[0];
   int inti_largest = stat_data.inti_level[0];
@@ -32,6 +32,7 @@ void ending(status &stat_data){
 
 
   while (run == 1) {
+    //If everyone's affinity level is beyond the poly_flag, you become lover with all of them
     if(stat_data.affi_level[0] >= poly_flag && stat_data.affi_level[1] >= poly_flag && stat_data.affi_level[2] >= poly_flag)
     {
       cout << "------------------------------[POLYGAMY ENDING]------------------------------" << endl;
@@ -95,7 +96,8 @@ void ending(status &stat_data){
      }
       cout <<  "----------------------------------Game Over---------------------------------" << endl;
     }
-
+    // Otherwise, if at least one of the character's affinity level is greater than the lover_flag,
+    // you become a lover with the character with the highest affinity level
     else if(affi_largest >= love_flag)
     {
       if(affi_largest == stat_data.affi_level[0])
@@ -117,41 +119,41 @@ void ending(status &stat_data){
         cout << setw(46) << " LEE SEUNG HUN " << endl;
         // Christmas Tree For Happy Ending
         int num=6, count=0;
-         int mid = 30;
+          int mid = 30;
         cout << "";
         count=num-2;
         int joint=0;
         while(count>0)
-         {
-           for(int row=0;row<num-count+1;row++) { for(int blank=num-joint+mid;blank>=row; blank--)
+          {
+            for(int row=0;row<num-count+1;row++) { for(int blank=num-joint+mid;blank>=row; blank--)
               {
                 cout<<" ";
               }
-           for(int left =0;left<=row+joint;left++)
+            for(int left =0;left<=row+joint;left++)
               {
                 cout<<"*";
               }
-           for(int right =0;right<=row+joint;right++)
-             {
+            for(int right =0;right<=row+joint;right++)
+              {
                 cout<<"*";
-             }
+              }
           cout << endl;
         }
-      count--;
-      joint++;
-      }
-      int v;
-      for(int stem = 0;stem<2;stem++)
-       {
-         if(num==4)
-             v=1;
-         else
-             v=0;
-         cout << setw(v+mid+num+num-num/2);
-         cout << "  | |"<<endl;
-        cout <<  "----------------------------------Game Over---------------------------------" << endl;
+        count--;
+        joint++;
         }
-      }
+        int v;
+        for(int stem = 0;stem<2;stem++)
+          {
+            if(num==4)
+                v=1;
+            else
+                v=0;
+            cout << setw(v+mid+num+num-num/2);
+            cout << "  | |"<<endl;
+          cout <<  "----------------------------------Game Over---------------------------------" << endl;
+          }
+        }
       else if(affi_largest == stat_data.affi_level[1])
       {
         cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
@@ -206,7 +208,7 @@ void ending(status &stat_data){
          cout << "  | |" << endl;
        }
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
-    }
+      }
       else
       {
         cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
@@ -247,22 +249,26 @@ void ending(status &stat_data){
               }
           cout << endl;
         }
-      count--;
-      joint++;
-      }
-      int v;
-      for(int stem = 0; stem < 2; stem++)
-       {
-         if(num == 4)
-          v = 1;
-         else
-          v=0;
-         cout << setw(v + mid + num + num - num / 2);
-         cout << "  | |" << endl;
-       }
-        cout <<  "----------------------------------Game Over---------------------------------" << endl;
+        count--;
+        joint++;
+        }
+        int v;
+        for(int stem = 0; stem < 2; stem++)
+        {
+          if(num == 4)
+            v = 1;
+          else
+            v=0;
+          cout << setw(v + mid + num + num - num / 2);
+          cout << "  | |" << endl;
+        }
+          cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
     }
+    // Otherwise, if the affinity level of all three characters are below the lover_flag
+    // Next, consider the intimacy level of three characters
+    // If at least one of them has intimacy level greater than the inti_flag,
+    // You become a best friend with the character with highest intimacy level
     else if(inti_largest >= friend_flag)
     {
       if(inti_largest == stat_data.inti_level[0])
@@ -312,6 +318,9 @@ void ending(status &stat_data){
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
     }
+    // Otherwise, you have not become a lover nor best friend with our characters
+    // Which is actually very difficult to achieve.
+    // However, if you maintained you GPA very high, you get the hidden ending
     else if( stat_data.GPA > good_student_flag)
     {
       cout << "------------------------------[Hidden Ending revealed!]------------------------------" << endl;
@@ -333,6 +342,7 @@ void ending(status &stat_data){
       cout << setw(46) << " LEE SEUNG HUN " << endl;
     }
     else
+    // Finally, if non of the above, it is the solo ending
     {
       cout << "--------------------------------[SOLO Ending]---------------------------------" << endl;
       cout << " Coming Christmas, SADLY, you are alone..... " << endl;

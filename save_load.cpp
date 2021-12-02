@@ -46,7 +46,7 @@ void save_data(status stat_save)
     }
 }
 
-// this function calculates the number of " " in the string (number of words)
+// This function calculates the number of " " in the string (number of words)
 int num_space(string target) {
     int space = 0;
     for(int i = 0; i < target.length(); i++) {
