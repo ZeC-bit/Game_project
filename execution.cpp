@@ -101,6 +101,7 @@ void execution(status& stat_in) {
             cout << "Your Health became too bad and you earned yourself cancer.\n";
             cout << "You died T.T. Try to do some exercise next time!\n";
             cout << "(Hint: Why not play some sports?)\n";
+            qt_flag = true;
             break;
         }
         if (qt_flag == true) {
