@@ -72,7 +72,7 @@ void cafeteria(status* input_stat, int mood){
           }
         }
           // Random Chance of Iris Appearing on the Cafeteria.
-        else if(Daisy_Appear > 50 && Daisy_Appear < 69){
+        else if(Daisy_Appear >= 50 && Daisy_Appear <= 69){
           cout<< "Iris appears on the cafeteria" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           getchar();
@@ -102,7 +102,7 @@ void cafeteria(status* input_stat, int mood){
           }
         }
         // Random Chance of Olivia Appearing on the Cafeteria.
-        else if(Daisy_Appear > 70 && Daisy_Appear < 90){
+        else if(Daisy_Appear >= 70 && Daisy_Appear < 90){
           cout << "Olivia appears on the cafeteria" << endl;
           cout << " Hi, I'm Olivia. " << endl;
           getchar();
