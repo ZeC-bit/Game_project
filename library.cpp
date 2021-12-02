@@ -76,7 +76,7 @@ void library(status* input_stat, int mood){
           }
         }
         //Daisy Appears on the Library
-        else if(Iris_Appear > 50 && Iris_Appear < 69){
+        else if(Iris_Appear >= 50 && Iris_Appear <= 69){
           cout<< " Daisy appears on the library " << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
           cout << "Daisy: I was your classmate in the high school!!" << endl;
@@ -108,7 +108,7 @@ void library(status* input_stat, int mood){
           }
         }
         //Olivia appears on the Library
-        else if(Iris_Appear > 70 && Iris_Appear < 90){
+        else if(Iris_Appear >= 70 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
           cout << " Hi, I'm Olivia. " << endl;
           cout << " I am living in Starr Hall, and your hall mate!! " << endl;
