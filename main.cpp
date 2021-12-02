@@ -49,11 +49,11 @@ int main() {
     cout << "***********************************X********" << endl;
     cout << "(Press enter/return to continue)\n";
     getchar();
-    cout << "(someone from darkness) : Hey you!";
+    cout << "(someone from the monitor) : Hey you!";
     getchar();
-    cout <<  "(someone from the darkness) : Yes, you!";
+    cout <<  "(someone from the monitor) : Yes, you!";
     getchar();
-    cout << "(someone from the darkness) : You look familiar !" << endl << endl;
+    cout << "(someone from the monitor) : You look familiar !" << endl << endl;
     cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
     
     int starter;
@@ -75,8 +75,8 @@ int main() {
         }
         else {
             starting_stat = load_data(&starting_stat);
-            if (starting_stat == {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}}) {
-                cout << "Starting from beginning...";
+            if (starting_stat.name == "unkown" && starting_stat.date == 1 && starting_stat.sun == 0 && starting_stat.GPA == 3.0 && starting_stat.hp == 3) {
+                cout << "Starting from beginning...\n";
                 getchar();
                 introduction(&starting_stat.name);
             }
