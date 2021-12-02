@@ -10,6 +10,7 @@ using namespace std;
 // Perid of the day ==> 1. morning 2. afternoon 3. evening
 // Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
+
 void ending(status &stat_data){
   int run = 1;
   double poly_flag = 6;
@@ -42,6 +43,7 @@ void ending(status &stat_data){
       cout << " You have gained All you wanted " << endl;
       cout << " Going outside the street, everyone is looking at you with three girl friends " << endl;
       cout << " Then, You start to laugh out loud " << endl;
+      cout << " This Christmas is full of bliss and happiness " << endl;
       cout << " What a Successful Ending!!! " << endl;
       cout << " ";
       cout << stat_data.names[0] << " Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0];
@@ -278,7 +280,7 @@ void ending(status &stat_data){
         cout << " Coming Christmas, you are not alone!!! You are going to make a Christmas Tree " << endl;
         cout << " with Iris!! " << endl;
         cout << " Iris is your Best Friend! You can get help for assignments if you get stucked " << endl;
-        cout << " ";
+        cout << " "
         cout << "Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -293,6 +295,8 @@ void ending(status &stat_data){
         cout << " Well Played!!! Olivia has become your best friend!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to make a Christmas Tree " << endl;
         cout << " with Olivia!! " << endl;
+        cout << " Olivia is your Best Friend! Since she is your hallmate,  " << endl;
+        cout << " You can have a wonderful hall life!!" << endl;
         cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[1] << "  Intimacy Level:  " << stat_data.inti_level[1] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -308,6 +312,8 @@ void ending(status &stat_data){
         cout << " Well Played!!! Daisy has become your best friend!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to make a Christmas Tree " << endl;
         cout << " with Daisy!! " << endl;
+        cout << " Daisy is your Best Friend! Since she was your high school mate,  " << endl;
+        cout << " and Super Rich, she will buy you dinner many times!!! " << endl;
         cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -326,7 +332,7 @@ void ending(status &stat_data){
       cout << "------------------------------[Hidden Ending revealed!]------------------------------" << endl;
       cout << "--------------------------------[Dean's List Ending]---------------------------------" << endl;
       cout << " Great!!! You have obtained the Honor of Dean's List!! " << endl;
-      cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
+      cout << " GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
       cout << " You spend the Christmas Eve at HW311 to prepare for next sem" << endl;
       cout << " You feel somewhat lonely, so you move to Chiwah Learning Commons" << endl;
       cout << " However, there is no one in Chiwah because it's Christmas Eve" << endl;
@@ -351,7 +357,7 @@ void ending(status &stat_data){
       cout << " Since you get bored of watching Christmas movies at home, you plan to study for next semester. " << endl;
       cout << " Feeling depressed, you decide to immerse yourself into the game, 'Under the Mistletoe' " << endl;
       cout << " Don't Get Frustrated!! You Still have Chance!!  " << endl;
-      cout << " Try to be more Romantic Next Time!! " << endl;
+      cout << " Try to be more Romantic or Friendly Next Time!! " << endl;
 
       cout << " ";
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
