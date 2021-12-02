@@ -5,11 +5,14 @@
 #include <string>
 #include <cstdlib>
 #include <stdlib.h>
+#include "library.h"
 #include "universal.h"
 using namespace std;
-// play.day
-//play.period ==> 1. morning 2. afternoon 3. evening
-//play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
+//Inputs of the function are struct Status. The affinity level, intimacy level, GPA, and
+//Health points are stored in the structure. Throughout the process of the game, the data stored
+//Status Structure will be continuously modified where they are set as pointer variables.
+// Perid of the day ==> 1. morning 2. afternoon 3. evening
+// Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 void library(status* input_stat, int mood){
   char choose;
@@ -37,10 +40,10 @@ void library(status* input_stat, int mood){
       if(sel ==1){
         srand(time(0));
         int Iris_Appear = rand() % 100;
-        //Iris appears
-        if(Iris_Appear < 70){
+        //Iris Appears on the Library
+        if(Iris_Appear < 50){
           cout << " Iris appears on the library " << endl;
-          cout << "Hi, I'm Iris!" << endl;
+          cout << "Iris: Hi, I'm Iris!" << endl;
           cout << "Iris: I take the same class as you and I'm on the dean's list!" << endl;
           getchar();
           cout << " You met Iris on Main library. " << endl;
@@ -57,6 +60,7 @@ void library(status* input_stat, int mood){
             cout << " Iris: Please don't fight...(But you made him silent) " << endl;
             input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
+            input_stat->
           }
           else if(input == 2){
             cout << " Iris: Thank you for your courage! " << endl;
@@ -70,7 +74,8 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-        else if(Iris_Appear > 70 && Iris_Appear < 79){
+        //Daisy Appears on the Library
+        else if(Iris_Appear > 50 && Iris_Appear < 69){
           cout<< " Daisy appears on the library " << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
           cout << "Daisy: I was your classmate in the high school!!" << endl;
@@ -101,7 +106,8 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-        else if(Iris_Appear > 80 && Iris_Appear < 90){
+        //Olivia appears on the Library
+        else if(Iris_Appear > 70 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
           cout << " Hi, I'm Olivia. " << endl;
           cout << " I am living in Starr Hall, and your roommate!! " << endl;
@@ -131,12 +137,13 @@ void library(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-
+        // Prof Chim appears on the Library
         else
         {
-          cout << "Prof T.W. Chim appears" << endl;
+          cout << "Prof T.W. Chim appears on the Library" << endl;
     	    getchar();
-    	    cout << "Today is the first day of lecture. Hence, I will give you guys a question!" << endl;
+          cout << " It is nice to see you guys studying hard in the Library!! " << endl;
+           cout << " So, I will give you a surprise quiz hahahaha " << endl;
     	    cout << "Guess if you do not know the answer. In linux, the ________ command can be used to remove directories." << endl;
     	    getchar();
     	    cout << "choose a number between 1 and 3" << endl;
@@ -164,17 +171,20 @@ void library(status* input_stat, int mood){
     	    }
         }
         input_stat->hp -= 1;
+        input_stat->GPA += 0.5;
       }
       else if(sel == 2){
           cout << "Going back home. " << endl;
           input_stat->hp -= 1;
           input_stat->sun += 1;
+          input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 2;
           input_stat->sun += 1;
+          input_stat->GPA -= 0.1;
         }
       run = 0;
       }
