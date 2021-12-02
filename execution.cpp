@@ -39,6 +39,7 @@ void decision (status& pass_stat, int pass_mood, bool *qt) {
             break;
         case 6:
             pass_stat = load_data(&pass_stat);
+            break;
         case 7:
             cout << "See you again!\n";
             *qt = true;
