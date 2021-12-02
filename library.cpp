@@ -60,7 +60,6 @@ void library(status* input_stat, int mood){
             cout << " Iris: Please don't fight...(But you made him silent) " << endl;
             input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
-            input_stat->
           }
           else if(input == 2){
             cout << " Iris: Thank you for your courage! " << endl;
