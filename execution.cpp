@@ -114,6 +114,7 @@ void execution(status stat_in) {
         srand(time(0));
         mood = rand() % 3;
 
+        getchar();
         decision(current_stat, mood, &qt_flag);
 
         // This is when you do not care about maintaining health in the game
