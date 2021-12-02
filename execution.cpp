@@ -102,8 +102,12 @@ void execution(status& stat_in) {
         }
         if (current_stat.hp <= 0) {
             cout << "Your Health became too bad and you earned yourself cancer.\n";
+            getchar();
+            getchar();
             cout << "You died T.T. Try to do some exercise next time!\n";
             cout << "(Hint: Why not play some sports?)\n";
+            getchar();
+            getchar();
             qt_flag = true;
             break;
         }

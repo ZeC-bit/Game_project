@@ -9,7 +9,7 @@ using namespace std;
 void save_data(status stat_save)
 {
     string fork;
-    cout << "Do you want to save current progress?";
+    cout << "Do you want to save current progress?\n";
     getchar();
     cout << "Press 'n' if you do not wish to save.";
     
@@ -32,6 +32,7 @@ void save_data(status stat_save)
         d_out << stat_save.GPA << endl << stat_save.hp << endl;
         cout << "Your current progress has been saved at \"" << save_name << "!\"" << endl;
         d_out.close();
+        getchar();
     }
 }
 
@@ -47,9 +48,9 @@ int num_space(string target) {
 
 status load_data (status *stat_ptr) {
     string fork;
-    cout << "Do you want to save current progress?";
+    cout << "Do you want to load from previous progress? ";
     getchar();
-    cout << "Press 'n' if you do not wish to save.";
+    cout << "Press 'n' if you do not wish to load.";
     
     fork = getchar();
     if (fork == "n" || fork == "N") {
@@ -80,8 +81,8 @@ status load_data (status *stat_ptr) {
             string * fedex = new string [num_space(container)];
             for (int index = 0; index < num_space(container); index++) {
                 posi = container.find(' ');
-                fedex[index] = container.substr(0, posi);
-                container = container.erase(0, posi + 1);
+                fedex[index] = container.substr(0, posi - 1);
+                container = container.erase(0, posi);
             }
             stat_ptr->name = fedex[0];
             stat_ptr->date = stoi(fedex[1]);
@@ -95,7 +96,9 @@ status load_data (status *stat_ptr) {
             stat_ptr->GPA = stod(fedex[9]);
             stat_ptr->hp = stoi(fedex[10]);
 
-            cout << "Data has been successfully loaded!" << endl;
+            cout << "Data has been successfully loaded!";
+            getchar();
+            getchar();
             d_in.close();
             return *stat_ptr;
         }
