@@ -71,8 +71,8 @@ void garden(status* input_stat, int mood){
           cout<< "Iris appears on the Garden" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
           getchar();
-          cout << "Stressed out due to excessive amount of assignments and examinations," << endl;
-          cout << "You went to Garden to chill. And you found Iris crying on the bench. " << endl;
+          cout << "You discovered a beautiful flower on the way to the Garden. " << endl;
+          cout << "You remember that Iris likes flower" << endl;
           getchar();
           cout << " 1. Take the flower to give her " << endl;
           cout << " 2. Since you consider every living thing a precious one, you keep walking to the garden " << endl;
@@ -99,6 +99,9 @@ void garden(status* input_stat, int mood){
         else if(Olivia_Appear > 70 && Olivia_Appear < 90){
           cout << "Daisy appears on the Garden" << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
+          getchar();
+          cout << " You discovered a beautiful flower on the way to the Garden. " << endl;
+          cout << " You remember that Daisy likes flower " << endl;
           getchar();
           cout << " 1. Take the flower to give her " << endl;
           cout << " 2. Since you consider every living thing a precious one, you keep walking to the garden " << endl;
