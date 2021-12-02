@@ -11,7 +11,6 @@ using namespace std;
 // Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 void ending(status &stat_data){
-// M = specific value
   int run = 1;
   int poly_flag;
   int love_flag;
@@ -64,7 +63,7 @@ void ending(status &stat_data){
       int joint = 0;
       while(count > 0)
        {
-         for(int row=0;row<num-count+1;row++) { 
+         for(int row=0;row<num-count+1;row++) {
            for(int blank=num-joint+mid;blank>=row; blank--)
             {
               cout << " ";
@@ -94,12 +93,12 @@ void ending(status &stat_data){
      }
       cout <<  "----------------------------------Game Over---------------------------------" << endl;
     }
-    else if(affi_largest == stat_data.affi_level[1])
+    else if(affi_largest == stat_data.affi_level[0])
     {
-      cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
-      cout << " Congratulations!!! Olivia has fallen in love with you!!! "<< endl;
+      cout << "--------------------------------[IRIS ENDING]--------------------------------" << endl;
+      cout << " Congratulations!!! Iris has fallen in love with you!!! "<< endl;
       cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-      cout << " with OLivia!! " << endl;
+      cout << " with Iris!! " << endl;
       cout << " ";
       cout << "Affinity Level: " << stat_data.affi_level[1] << "  Intimacy Level:  " << stat_data.inti_level[1] << endl;
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -108,49 +107,51 @@ void ending(status &stat_data){
       cout << setw(47) << " PARK HYEON BEOM " << endl;
       cout << setw(46) << " LEE SEUNG HUN " << endl;
       // Christmas Tree For Happy Ending
-      int num=6, count=0;
-       int mid = 30;
+      int num = 6, count = 0;
+      int mid = 30;
       cout << "";
-      count=num-2;
-      int joint=0; 
-      while(count>0)
+      count = num - 2;
+      int joint = 0;
+      while(count > 0)
        {
-         for(int row=0;row<num-count+1;row++) { for(int blank=num-joint+mid;blank>=row; blank--)
+         for(int row=0;row<num-count+1;row++) {
+           for(int blank=num-joint+mid;blank>=row; blank--)
             {
-              cout<<" ";
+              cout << " ";
             }
-         for(int left =0;left<=row+joint;left++)
+            for(int left =0;left<=row+joint;left++)
             {
-              cout<<"*";
+              cout << "*";
             }
-         for(int right =0;right<=row+joint;right++)
-           {
-              cout<<"*";
-           }
+            for(int right =0;right<=row+joint;right++)
+            {
+              cout << "*";
+            }
         cout << endl;
       }
     count--;
     joint++;
     }
     int v;
-    for(int stem = 0;stem<2;stem++)
+    for(int stem = 0; stem < 2; stem++)
      {
-       if(num==4)
-           v=1;
+       if(num == 4)
+        v = 1;
        else
-           v=0;
-       cout << setw(v+mid+num+num-num/2);
-       cout << "  | |"<<endl;
-      cout <<  "----------------------------------Game Over---------------------------------" << endl;
-    }
+        v=0;
+       cout << setw(v + mid + num + num - num / 2);
+       cout << "  | |" << endl;
+     }
+    cout <<  "----------------------------------Game Over---------------------------------" << endl;
+  }
     else if(affi_largest >= love_flag)
     {
-      if(affi_largest == stat_data.affi_level[0])
+      if(affi_largest == stat_data.affi_level[1])
       {
-        cout << "--------------------------------[Iris ENDING]--------------------------------" << endl;
-        cout << " Congratulations!!! Iris has fallen love with you!!! "<< endl;
+        cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
+        cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Iris!! " << endl
+        cout << " with Olivia!! " << endl
         cout << " "
         cout << "Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -159,103 +160,9 @@ void ending(status &stat_data){
         cout << setw(47) << " PARK HYEON BEOM " << endl;
         cout << setw(46) << " LEE SEUNG HUN " << endl;
         // Christmas Tree For Happy Ending
-        int num=6,count=0;
-         int mid=30;
-        cout<<""; count=num-2;int joint=0; while(count>0)
-         {
-           for(int row=0;row<num-count+1;row++) { for(int blank=num-joint+mid;blank>=row; blank--)
-              {
-                cout<<" ";
-              }
-           for(int left =0;left<=row+joint;left++)
-              {
-                cout<<"*";
-              }
-           for(int right =0;right<=row+joint;right++)
-             {
-                cout<<"*";
-             }
-          cout<<endl;
-        }
-      count--;
-      joint++;
-      }
-      int v;
-      for(int stem = 0;stem<2;stem++)
-      {
-         if(num==4)
-             v=1;
-         else
-             v=0;
-         cout << setw(v+mid+num+num-num/2);
-         cout << "  | |" << endl;
-      }
-        cout <<  "----------------------------------Game Over---------------------------------" << endl;
-  }
-      else if(affi_largest == stat_data.affi_level[1])
-      {
-        cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
-        cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
-        cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with OLivia!! " << endl
-        cout << " "
-        cout << "Affinity Level: " << stat_data.affi_level[1] << "  Intimacy Level:  " << stat_data.inti_level[1] << endl;
-        cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
-        cout << setw(55) << " Thank you for playing this Game!!" << endl;
-        cout << setw(45) << " CREDITS TO " << endl;
-        cout << setw(47) << " PARK HYEON BEOM " << endl;
-        cout << setw(46) << " LEE SEUNG HUN " << endl;
-        // Christmas Tree For Happy Ending
-        int num=6,count=0;
-         int mid=30;
-        cout<<""; count=num-2;int joint=0; while(count>0)
-         {
-           for(int row=0;row<num-count+1;row++) { for(int blank=num-joint+mid;blank>=row; blank--)
-              {
-                cout<<" ";
-              }
-           for(int left =0;left<=row+joint;left++)
-              {
-                cout<<"*";
-              }
-           for(int right =0;right<=row+joint;right++)
-             {
-                cout<<"*";
-             }
-          cout<<endl;
-        }
-      count--;
-      joint++;
-      }
-      int v;
-      for(int stem = 0;stem<2;stem++)
-       {
-         if(num==4)
-             v=1;
-         else
-             v=0;
-         cout << setw(v+mid+num+num-num/2);
-         cout << "  | |"<<endl;
-       }
-        cout <<  "----------------------------------Game Over---------------------------------" << endl;
-      }
-      else
-      {
-        cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
-        cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
-        cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl
-        cout << " "
-        cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
-        cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
-        cout << setw(55) << " Thank you for playing this Game!!" << endl;
-        cout << setw(45) << " CREDITS TO " << endl;
-        cout << setw(47) << " PARK HYEON BEOM " << endl;
-        cout << setw(46) << " LEE SEUNG HUN " << endl;
-        // Christmas Tree For Happy Ending
-        int num=6,count=0;
-         int mid=30;
-        cout<<"";
+        int num=6, count=0;
+         int mid = 30;
+        cout << "";
         count=num-2;
         int joint=0;
         while(count>0)
@@ -272,7 +179,7 @@ void ending(status &stat_data){
              {
                 cout<<"*";
              }
-          cout<<endl;
+          cout << endl;
         }
       count--;
       joint++;
@@ -286,6 +193,108 @@ void ending(status &stat_data){
              v=0;
          cout << setw(v+mid+num+num-num/2);
          cout << "  | |"<<endl;
+        cout <<  "----------------------------------Game Over---------------------------------" << endl;
+        }
+      }
+      else if(affi_largest == stat_data.affi_level[2])
+      {
+        cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
+        cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
+        cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
+        cout << " with Daisy!! " << endl
+        cout << " "
+        cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
+        cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
+        cout << setw(55) << " Thank you for playing this Game!!" << endl;
+        cout << setw(45) << " CREDITS TO " << endl;
+        cout << setw(47) << " PARK HYEON BEOM " << endl;
+        cout << setw(46) << " LEE SEUNG HUN " << endl;
+        // Christmas Tree For Happy Ending
+        int num = 6, count = 0;
+        int mid = 30;
+        cout << "";
+        count = num - 2;
+        int joint = 0;
+        while(count > 0)
+         {
+           for(int row=0;row<num-count+1;row++) {
+             for(int blank=num-joint+mid;blank>=row; blank--)
+              {
+                cout << " ";
+              }
+              for(int left =0;left<=row+joint;left++)
+              {
+                cout << "*";
+              }
+              for(int right =0;right<=row+joint;right++)
+              {
+                cout << "*";
+              }
+          cout << endl;
+        }
+      count--;
+      joint++;
+      }
+      int v;
+      for(int stem = 0; stem < 2; stem++)
+       {
+         if(num == 4)
+          v = 1;
+         else
+          v=0;
+         cout << setw(v + mid + num + num - num / 2);
+         cout << "  | |" << endl;
+       }
+        cout <<  "----------------------------------Game Over---------------------------------" << endl;
+    }
+      else
+      {
+        cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
+        cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
+        cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
+        cout << " with Daisy!! " << endl
+        cout << " "
+        cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
+        cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
+        cout << setw(55) << " Thank you for playing this Game!!" << endl;
+        cout << setw(45) << " CREDITS TO " << endl;
+        cout << setw(47) << " PARK HYEON BEOM " << endl;
+        cout << setw(46) << " LEE SEUNG HUN " << endl;
+        // Christmas Tree For Happy Ending
+        int num = 6, count = 0;
+        int mid = 30;
+        cout << "";
+        count = num - 2;
+        int joint = 0;
+        while(count > 0)
+         {
+           for(int row=0;row<num-count+1;row++) {
+             for(int blank=num-joint+mid;blank>=row; blank--)
+              {
+                cout << " ";
+              }
+              for(int left =0;left<=row+joint;left++)
+              {
+                cout << "*";
+              }
+              for(int right =0;right<=row+joint;right++)
+              {
+                cout << "*";
+              }
+          cout << endl;
+        }
+      count--;
+      joint++;
+      }
+      int v;
+      for(int stem = 0; stem < 2; stem++)
+       {
+         if(num == 4)
+          v = 1;
+         else
+          v=0;
+         cout << setw(v + mid + num + num - num / 2);
+         cout << "  | |" << endl;
        }
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
@@ -352,7 +361,7 @@ void ending(status &stat_data){
       cout << " Today's sorrow will be the seed for tomorrow's bright victory" << endl;
       cout << " Lonely programmer, one day, you will shine brightly" << endl;
       cout << " We present this game for those who have discovered this ending" << endl;
-      
+
       cout << setw(55) << " Thank you for playing this Game!!" << endl;
       cout << setw(45) << " CREDITS TO " << endl;
       cout << setw(47) << " PARK HYEON BEOM " << endl;
