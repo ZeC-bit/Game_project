@@ -14,7 +14,7 @@ using namespace std;
 void decision (status& pass_stat, int pass_mood, bool *qt) {
     cout << "What are you up to?" << endl;
     cout << "[1] Go to library [2] Go to garden [3] Go to cafeteria" << endl;
-    cout << "[4] Go to lecture room [5] Save progress [6] Load save data" << endl;
+    cout << "[4] Go to lecture room [5] Save progress [6] Load data" << endl;
     cout << "[7] Quit game" << endl;
 
     int input;
@@ -37,6 +37,8 @@ void decision (status& pass_stat, int pass_mood, bool *qt) {
         case 5:
             save_data(pass_stat);
             break;
+        case 6:
+            pass_stat = load_data(&pass_stat);
         case 7:
             cout << "See you again!\n";
             *qt = true;
