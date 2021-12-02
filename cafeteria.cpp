@@ -103,7 +103,7 @@ void cafeteria(status* input_stat, int mood){
           cout << " Hi, I'm Olivia. " << endl;
           getchar();
           cout << "You went to the Cafeteria with Olivia and found out that there was a cockroach inside the dish. " << endl;
-          getchar()l
+          getchar();
           cout << " 1. Leave the Cafeteria and buy her a nice meal. " << endl;
           cout << " 2. Throw the cockroach away and have the meal as if nothing happened. " << endl;
           cout << " 3. Go fight for the peace of Student Cafeteria!! " << endl;
