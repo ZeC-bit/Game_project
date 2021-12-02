@@ -55,17 +55,20 @@ void cafeteria(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Daisy: Thank you a lot for your comfort!!! I will do it better!! " << endl;
+            cout << " Daisy: Thank you a lot for your comfort!!! I will do it better!! ";
+            getchar();
             input_stat->affi_level[2] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Daisy: Thank you for the drink! I will buy you one day, haha " << endl;
+            cout << " Daisy: Thank you for the drink! I will buy you one day, haha ";
+            getchar();
             input_stat->inti_level[2] += increment;
             input_stat->sun += 1;
           }
           else{
-            cout << " (You saw Daisy with furious face) Daisy:......(Left Cafeteria) " << endl;
+            cout << " (You saw Daisy with furious face) Daisy:......(Left Cafeteria) ";
+            getchar();
             input_stat->inti_level[2] += decrement;
             input_stat->affi_level[2] += decrement;
             input_stat->sun += 1;
@@ -85,18 +88,21 @@ void cafeteria(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Iris: It was such a terrible experience. I won't go there again!! " << endl;
-            cout << " Iris: Btw Thank you for the meal!! " << endl;
+            cout << " Iris: Btw Thank you for the meal!! ";
+            getchar();
             input_stat->affi_level[0] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Iris: ....(Left Cafeteria) " << endl;
+            cout << " Iris: ....(Left Cafeteria) ";
+            getchar();
             input_stat->inti_level[0] += decrement;
             input_stat->affi_level[0] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " Iris: Thank you for your courage...I don't wanna go there agian... " << endl;
+            cout << " Iris: Thank you for your courage...I don't wanna go there agian... ";
+            getchar();
             input_stat->inti_level[0] += 1;
             input_stat->sun += 1;
           }
@@ -115,18 +121,21 @@ void cafeteria(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Olivia: It was such a terrible experience. I won't go there again!! " << endl;
-            cout << " Olivia: Btw Thank you for the meal!! " << endl;
+            cout << " Olivia: Btw Thank you for the meal!! ";
+            getchar();
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Olivia: ....(Left Cafeteria) " << endl;
+            cout << " Olivia: ....(Left Cafeteria) ";
+
             input_stat->inti_level[1] += decrement;
             input_stat->affi_level[1] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " Olivia: Thank you for your courage...I don't wanna go there agian... " << endl;
+            cout << " Olivia: Thank you for your courage...I don't wanna go there agian... ";
+            getchar();
             input_stat->inti_level[1] += increment;
             input_stat->sun += 1;
           }
@@ -147,19 +156,22 @@ void cafeteria(status* input_stat, int mood){
           cin >> input;
           if(input == 1)
           {
-            cout << " Correct!!! You have gained 0.5 input_stat->GPA points. " << endl;
+            cout << " Correct!!! You have gained 0.5 input_stat->GPA points. ";
+            getchar();
             input_stat->GPA += 0.5;
             input_stat->sun += 1;
           }
           else if(input ==2)
           {
-            cout << " Wrong! You have lost 0.5 input_stat->GPA points. "   << endl;
+            cout << " Wrong! You have lost 0.5 input_stat->GPA points. ";
+            getchar();
             input_stat->GPA -= 0.5;
             input_stat->sun += 1;
           }
           else
           {
-            cout << " Wrong! You have lost 0.5 input_stat->GPA points. " << endl;
+            cout << " Wrong! You have lost 0.5 input_stat->GPA points. ";
+            getchar();
             input_stat->GPA -= 0.5;
             input_stat->sun += 1;
           }
@@ -168,13 +180,15 @@ void cafeteria(status* input_stat, int mood){
           input_stat->GPA -= 0.1;
         }
       else if(sel == 2){
-          cout << "Going back home... " << endl;
+          cout << "Going back home... ";
+          getchar();
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
-          cout << " By playing badminton you can gain health point per match! " << endl;
+          cout << " By playing badminton you can gain health point per match! ";
+          getchar();
           input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
