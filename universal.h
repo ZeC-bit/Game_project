@@ -3,6 +3,7 @@
 #include <string>
 
 struct status {
+    int game_length;
     std::string name;
     int date;
     int sun;
