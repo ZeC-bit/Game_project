@@ -12,20 +12,29 @@ void save_data(status stat_save)
     cout << "Do you want to save current progress?\n";
     getchar();
     cout << "Press 'n' if you do not wish to save.";
-    
+
+    // Check again just in case
     fork = getchar();
     if (fork == "n" || fork == "N") {
         cout << "Going back home";
     }
     else {
         cout << "Enter name for your new save file.\n";
+        cout << "(without \".txt\"");
         cout << "(Caution: If you write an existing file name, all data will be overwritten!)\n";
+        
         ofstream d_out;
+
         string save_name;
         cin >> save_name;
+
         save_name += ".txt";
+
+        // create a new .txt file with the input name
         d_out.open(save_name.c_str());
+        // write data to the file save file
         d_out << stat_save.name << endl << stat_save.date << endl << stat_save.sun << endl;
+        // write data stored in the struct's array
         for (int i = 0; i != 3; i++) {
             d_out << stat_save.affi_level[i] << endl << stat_save.inti_level[i] << endl;
         }
@@ -36,6 +45,7 @@ void save_data(status stat_save)
     }
 }
 
+// this function calculates the number of " " in the string (number of words)
 int num_space(string target) {
     int space = 0;
     for(int i = 0; i < target.length(); i++) {
@@ -48,21 +58,23 @@ int num_space(string target) {
 
 status load_data (status *stat_ptr) {
     string fork;
-    cout << "Do you want to load from previous progress? ";
-    getchar();
+    cout << "Do you want to load data from previous progress?\n";
     cout << "Press 'n' if you do not wish to load.";
     
     fork = getchar();
     if (fork == "n" || fork == "N") {
-        cout << "Going back home\n";
+        cout << "Going back\n";
+        getchar();
+        //return just the input
         return *stat_ptr;
     }
     else {
-        cout << "Enter name of your save file.\n" << "(Excluding \".txt\")\n";
-        ifstream d_in;
+        cout << "Enter name of your save file excluding \".txt\")\n";
         string load_name;
         cin >> load_name;
         load_name += ".txt";
+
+        ifstream d_in;
         d_in.open(load_name.c_str());
         if (d_in.fail()) {
             cout << "Error in opening the file \"" << load_name << "\".\n";
@@ -71,13 +83,15 @@ status load_data (status *stat_ptr) {
         }
         else {
             string container = "", line_in;
-            //transfer all lines to a string container first
+            // transfer all lines from file to a string container first
+            // with a delimiter " "
             while(getline(d_in,line_in)) {
                 container += line_in;
                 container += " ";
             }
-            //cut the container word by word and transfer to the status components with their appropriate type
+            // cut the container word by word and transfer to the status components with their appropriate type
             int posi;
+            // dynamic array depending on the number of lines from file, that will store lines
             string * fedex = new string [num_space(container)];
             for (int index = 0; index < num_space(container); index++) {
                 posi = container.find(' ');
@@ -102,7 +116,5 @@ status load_data (status *stat_ptr) {
             d_in.close();
             return *stat_ptr;
         }
-        
-        
     }
 }
