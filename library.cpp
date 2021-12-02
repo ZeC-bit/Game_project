@@ -74,8 +74,6 @@ void library(status* input_stat, int mood){
             input_stat->affi_level[0] += decrement;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[0] -= 0.2;
-          input_stat->inti_level[0] -= 0.2;
         }
         //Daisy Appears on the Library
         else if(Iris_Appear > 50 && Iris_Appear < 69){
@@ -139,8 +137,6 @@ void library(status* input_stat, int mood){
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
-          input_stat->affi_level[1] += 0.3;
-          input_stat->inti_level[1] += 0.3;
         }
         // Prof Chim appears on the Library
         else
@@ -176,7 +172,7 @@ void library(status* input_stat, int mood){
     	    }
         }
         input_stat->hp -= 1;
-        input_stat->GPA += 0.5;
+        input_stat->GPA += 0.25;
       }
       else if(sel == 2){
           cout << "Going back home... " << endl;
