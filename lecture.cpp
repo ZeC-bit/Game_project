@@ -57,17 +57,17 @@ void lect(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Wrong! You have lost 1.5 input_stat->GPA points. " << endl;
+            cout << " Wrong! You have lost 1.5 GPA points. " << endl;
             input_stat->GPA -= 1.5;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Correct!!! You have gained 1.5 input_stat->GPA points. " << endl;
+            cout << " Correct!!! You have gained 1.5 GPA points. " << endl;
             input_stat->GPA += 1.5;
             input_stat->sun += 1;
           }
           else{
-            cout << " Wrong! You have lost 1.5 input_stat->GPA points. " << endl;
+            cout << " Wrong! You have lost 1.5 GPA points. " << endl;
             input_stat->GPA -= 1.5;
             input_stat->sun += 1;
           }
