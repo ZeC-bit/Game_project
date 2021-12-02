@@ -40,6 +40,7 @@ void garden(status* input_stat, int mood){
       if(sel ==1){
         srand(time(0));
         int Olivia_Appear = rand() % 100;
+          // Random Chance of Olivia Appearing on the Garden.
         if(Olivia_Appear < 50){
           cout << "Olivia appears on the Garden" << endl;
           cout << " Hi, I'm Olivia. " << endl;
@@ -70,7 +71,7 @@ void garden(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-        // random chances for Iris to appear
+    // Random Chance of Iris Appearing on the Garden.
         else if(Olivia_Appear > 50 && Olivia_Appear < 69){
           cout<< "Iris appears on the Garden" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
@@ -100,6 +101,7 @@ void garden(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+            // Random Chance of Daisy Appearing on the Garden.
         else if(Olivia_Appear > 70 && Olivia_Appear < 90){
           cout << "Daisy appears on the Garden" << endl;
           cout << "Hi!! I'm Daisy~~~ " << endl;
@@ -129,6 +131,7 @@ void garden(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+            // Random Chance of Prof. Chim Appearing on the Garden.
         else
         {
           cout << "Prof T.W. Chim appears on the Garden" << endl;
