@@ -85,8 +85,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Iris: ....." << endl;
-            input_stat->affi_level[0] -= decrement;
-            input_stat->inti_level[0] -= decrement;
+            input_stat->affi_level[0] += decrement;
+            input_stat->inti_level[0] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -99,6 +99,8 @@ void lect(status* input_stat, int mood){
             input_stat->affi_level[0] += increment;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[0] -= 0.2;
+          input_stat->inti_level[0] -= 0.2;
         }
           // Random Chance of Olivia Appearing on the Lecture Room.
         else if(Chim_Appear > 70 && Chim_Appear < 90){
@@ -113,8 +115,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Olivia: ....." << endl;
-            input_stat->affi_level[1] -= decrement;
-            input_stat->inti_level[1] -= decrement;
+            input_stat->affi_level[1] += decrement;
+            input_stat->inti_level[1] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -127,6 +129,8 @@ void lect(status* input_stat, int mood){
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
+          input_stat->affi_level[1] += 0.3;
+          input_stat->inti_level[1] += 0.3;
         }
           // Random Chance of Daisy Appearing on the Lecture Room.
         else
@@ -142,8 +146,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Daisy: ....." << endl;
-            input_stat->affi_level[2] -= decrement;
-            input_stat->inti_level[2] -= decrement;
+            input_stat->affi_level[2] += decrement;
+            input_stat->inti_level[2] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -161,15 +165,14 @@ void lect(status* input_stat, int mood){
           input_stat->GPA += 0.3;
         }
       else if(sel == 2){
-          cout << "Going back home. " << endl;
-          input_stat->hp -= 1;
+          cout << "Going back home... " << endl;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
-          input_stat->hp += 1;
+          input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
         }
