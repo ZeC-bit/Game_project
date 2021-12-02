@@ -1,6 +1,6 @@
 FLAGS = -pedantic-errors -std=c++11
 
-Under_the_Mistletoe: main.o execution.o save_load.o cafeteria.o lecture.o garden.o library.o
+Under_the_Mistletoe: main.o execution.o save_load.o ending.o cafeteria.o lecture.o garden.o library.o
 	g++ $(FLAGS) $^ -o $@
 
 library.o: library.cpp library.h
@@ -18,7 +18,10 @@ cafeteria.o: cafeteria.cpp cafeteria.h
 save_load.o: save_load.cpp save_load.h
 	g++ $(FLAGS) -c $<
 
-execution.o: execution.cpp execution.h library.h garden.h lecture.h cafeteria.h save_load.h
+ending.o: ending.cpp ending.h
+	g++ $(FLAGS) -c $<
+
+execution.o: execution.cpp execution.h library.h garden.h lecture.h cafeteria.h save_load.h ending.h
 	g++ $(FLAGS) -c $<
 
 main.o: main.cpp
