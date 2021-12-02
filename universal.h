@@ -2,6 +2,8 @@
 #define UNIVERSAL_H
 #include <string>
 
+const std::string names[3] = {"Iris", "Olivia", "Daisy"};
+
 struct status {
     std::string name;
     int date;
@@ -10,7 +12,7 @@ struct status {
     double inti_level[3];
     double GPA;
     int hp;
-    const std::string names[3] = {"Iris", "Olivia", "Daisy"};
+    std::string names[3];
 };
 
 #endif

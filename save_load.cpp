@@ -54,7 +54,7 @@ status load_data (status *stat_ptr) {
     fork = getchar();
     if (fork == "n" || fork == "N") {
         cout << "Going back home\n";
-        return &*stat_ptr;
+        return *stat_ptr;
     }
     else {
         cout << "Enter name of your save file.\n" << "(Excluding \".txt\")\n";
@@ -66,7 +66,7 @@ status load_data (status *stat_ptr) {
         if (d_in.fail()) {
             cout << "Error in opening the file \"" << load_name << "\".\n";
             cout << "Going back home\n";
-            return &stat_ptr;
+            return *stat_ptr;
         }
         else {
             string container = "", line_in;
@@ -97,7 +97,7 @@ status load_data (status *stat_ptr) {
 
             cout << "Data has been successfully loaded!" << endl;
             d_in.close();
-            return &stat_ptr;
+            return *stat_ptr;
         }
         
         
