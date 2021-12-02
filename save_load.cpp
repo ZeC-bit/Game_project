@@ -32,3 +32,5 @@ void save_data(status stat_save)
     cout << "Your current progress has been saved at \"" << save_name << "!\"" << endl;
     d_out.close();
 }
+
+void load_data ()
