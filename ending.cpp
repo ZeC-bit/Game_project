@@ -35,11 +35,13 @@ void ending(status &stat_data){
     if(stat_data.affi_level[0] >= poly_flag && stat_data.affi_level[1] >= poly_flag && stat_data.affi_level[2] >= poly_flag)
     {
       cout << "------------------------------[POLYGAMY ENDING]------------------------------" << endl;
-      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! ";
-      getchar();
-      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with ";
-      getchar();
+      cout << " Congratulations!!! Iris, Olivia, and Daisy all of them have fallen love with you!!! "; << endl;
+      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time with "; << endl;
       cout << " Iris, Olivia, and Daisy!!! " << endl;
+      cout << " You have gained All you wanted " << endl;
+      cout << " Going outside the street, everyone is looking at you with three girl friends " << endl;
+      cout << " Then, You start to laugh out loud " << endl;
+      cout << " What a Successful Ending!!! " << endl;
       cout << " ";
       cout << stat_data.names[0] << " Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0];
       getchar();
@@ -93,66 +95,20 @@ void ending(status &stat_data){
      }
       cout <<  "----------------------------------Game Over---------------------------------" << endl;
     }
-    else if(affi_largest == stat_data.affi_level[0])
-    {
-      cout << "--------------------------------[IRIS ENDING]--------------------------------" << endl;
-      cout << " Congratulations!!! Iris has fallen in love with you!!! "<< endl;
-      cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-      cout << " with Iris!! " << endl;
-      cout << " ";
-      cout << "Affinity Level: " << stat_data.affi_level[1] << "  Intimacy Level:  " << stat_data.inti_level[1] << endl;
-      cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
-      cout << setw(55) << " Thank you for playing this Game!!" << endl;
-      cout << setw(45) << " CREDITS TO " << endl;
-      cout << setw(47) << " PARK HYEON BEOM " << endl;
-      cout << setw(46) << " LEE SEUNG HUN " << endl;
-      // Christmas Tree For Happy Ending
-      int num = 6, count = 0;
-      int mid = 30;
-      cout << "";
-      count = num - 2;
-      int joint = 0;
-      while(count > 0)
-       {
-         for(int row=0;row<num-count+1;row++) {
-           for(int blank=num-joint+mid;blank>=row; blank--)
-            {
-              cout << " ";
-            }
-            for(int left =0;left<=row+joint;left++)
-            {
-              cout << "*";
-            }
-            for(int right =0;right<=row+joint;right++)
-            {
-              cout << "*";
-            }
-        cout << endl;
-      }
-    count--;
-    joint++;
-    }
-    int v;
-    for(int stem = 0; stem < 2; stem++)
-     {
-       if(num == 4)
-        v = 1;
-       else
-        v=0;
-       cout << setw(v + mid + num + num - num / 2);
-       cout << "  | |" << endl;
-     }
-    cout <<  "----------------------------------Game Over---------------------------------" << endl;
-  }
+
     else if(affi_largest >= love_flag)
     {
-      if(affi_largest == stat_data.affi_level[1])
+      if(affi_largest == stat_data.affi_level[0])
       {
-        cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
-        cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
+        cout << "--------------------------------[IRIS ENDING]--------------------------------" << endl;
+        cout << " Congratulations!!! IRIS has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Olivia!! " << endl;
-        cout << " ";
+        cout << " with Iris!! ";
+        get char();
+        cout << " Since Iris is in the dean's list, she will help you with your academic support as well!" << endl;
+        cout << " This Christmas, you have gained both love as well as GPA..." << endl;
+        cout << " What a Successful Ending!!!" << endl;
+        cout << " "
         cout << "Affinity Level: " << stat_data.affi_level[0] << "  Intimacy Level:  " << stat_data.inti_level[0] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
@@ -196,14 +152,18 @@ void ending(status &stat_data){
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
         }
       }
-      else if(affi_largest == stat_data.affi_level[2])
+      else if(affi_largest == stat_data.affi_level[1])
       {
-        cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
-        cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
+        cout << "--------------------------------[OLIVIA ENDING]--------------------------------" << endl;
+        cout << " Congratulations!!! Olivia has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl;
+        cout << " with Olivia!! ";
+        getchar();
+        cout << " As Olivia is your hallmate who is one of the members in Hall Readmission, " << endl;
+        cout << " You have greater chance for getting readmitted for the next year and so on..!!" << endl;
+        cout << " This Christmas, You have gained both love as well as readmission for your University Life!! " << endl;
         cout << " ";
-        cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
+        cout << "Affinity Level: " << stat_data.affi_level[1] << "  Intimacy Level:  " << stat_data.inti_level[1] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
         cout << setw(55) << " Thank you for playing this Game!!" << endl;
         cout << setw(45) << " CREDITS TO " << endl;
@@ -252,7 +212,11 @@ void ending(status &stat_data){
         cout << "--------------------------------[DAISY ENDING]--------------------------------" << endl;
         cout << " Congratulations!!! Daisy has fallen love with you!!! "<< endl;
         cout << " Coming Christmas, you are not alone!!! You are going to have a happy time " << endl;
-        cout << " with Daisy!! " << endl;
+        cout << " with Daisy!! ";
+        getchar();
+        cout << " Since Daisy is your high school class mate as well as a super rich,  " << endl;
+        cout << " You went to Cruise Travelling in Europe this Christmas and had a wonderful time there!!!" << endl;
+        cout << " This Christmas, You have gained both love as well as money !!" << endl;
         cout << " ";
         cout << "Affinity Level: " << stat_data.affi_level[2] << "  Intimacy Level:  " << stat_data.inti_level[2] << endl;
         cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -347,9 +311,9 @@ void ending(status &stat_data){
         cout <<  "----------------------------------Game Over---------------------------------" << endl;
       }
     }
-    else if(stat_data.GPA > good_student_flag)
+    else if( stat_data.GPA > good_student_flag)
     {
-      cout << "------------------------------[Hidden Ending revealed!]------------------------------";
+      cout << "------------------------------[Hidden Ending revealed!]------------------------------"
       cout << "--------------------------------[Dean's List Ending]---------------------------------" << endl;
       cout << " Great!!! You have obtained the Honor of Dean's List!! " << endl;
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
@@ -369,17 +333,24 @@ void ending(status &stat_data){
     }
     else
     {
-      cout << "------------------------------[SOLO Ending]-----------------------------------" << endl;
+      cout << "--------------------------------[SOLO Ending]---------------------------------" << endl;
       cout << " Coming Christmas, SADLY, you are alone..... " << endl;
+      cout << " It is your 23 times of yourself spending Christmas alone..." << endl;
+      cout << " When you look at outside from your home, you see numerous of couples hanging out " << endl;
+      cout << " Since you get bored of watching Christmas movies at home, you plan to study for next semester. " << endl;
+      cout << " Feeling depressed, you decide to immerse yourself into the game, 'Under the Mistletoe' " << endl;
       cout << " Don't Get Frustrated!! You Still have Chance!!  " << endl;
       cout << " Try to be more Romantic Next Time!! " << endl;
+
       cout << " ";
       cout << "GPA: " << stat_data.GPA << setfill(' ') << setw(27) <<"  Health Point: " << stat_data.hp << endl;
       cout << setw(55) << " Thank you for playing this Game!!" << endl;
       cout << setw(45) << " CREDITS TO " << endl;
       cout << setw(47) << " PARK HYEON BEOM " << endl;
       cout << setw(46) << " LEE SEUNG HUN " << endl;
-    }
+
+    for( )
+
     run = 0;
   }
 }
