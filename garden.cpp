@@ -55,17 +55,20 @@ void garden(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << "Olivia: life is hard cuz of too much of tests and assignments..." << endl;
+            cout << "Olivia: life is hard cuz of too much of tests and assignments...";
+            getchar();
             input_stat->inti_level[1] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << "Thank you for comforting me.." << endl;
+            cout << "Thank you for comforting me..";
+            getchar();
             input_stat->affi_level[1] += increment;
             input_stat->sun += 1;
           }
           else{
-            cout << "(Nothing happens)" << endl;
+            cout << "(Nothing happens)";
+            getchar();
             input_stat->inti_level[1] += decrement;
             input_stat->affi_level[1] += decrement;
             input_stat->sun += 1;
@@ -85,18 +88,21 @@ void garden(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Iris: (With impression) I liked this kind of flower..Thank you!!" << endl;
+            cout << " Iris: (With impression) I liked this kind of flower..Thank you!!";
+            getchar();
             input_stat->affi_level[0] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Iris: .... " << endl;
+            cout << " Iris: .... ";
+            getchar();
             input_stat->inti_level[0] += decrement;
             input_stat->affi_level[0] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
+            cout << " It is really nice of you for this Oreo icecream! let's walk around!! ";
+            getchar();
             input_stat->inti_level[0] += increment;
             input_stat->sun += 1;
           }
@@ -115,18 +121,21 @@ void garden(status* input_stat, int mood){
           cout << "please enter a number from 1 to 3" << endl;
           cin >> input;
           if(input == 1){
-            cout << " Daisy: (With impression) I liked this kind of flower..Thank you!!" << endl;
+            cout << " Daisy: (With impression) I liked this kind of flower..Thank you!!";
+            getchar();
             input_stat->affi_level[2] += increment;
             input_stat->sun += 1;
           }
           else if(input == 2){
-            cout << " Daisy: .... " << endl;
+            cout << " Daisy: .... ";
+            getchar();
             input_stat->inti_level[2] += decrement;
             input_stat->affi_level[2] += decrement;
             input_stat->sun += 1;
           }
           else{
-            cout << " It is really nice of you for this Oreo icecream! let's walk around!! " << endl;
+            cout << " It is really nice of you for this Oreo icecream! let's walk around!! ";
+            getchar();
             input_stat->inti_level[2] += increment;
             input_stat->sun += 1;
           }
@@ -148,19 +157,22 @@ void garden(status* input_stat, int mood){
           cin >> input;
           if(input == 1)
           {
-            cout << " Correct!!! You have gained 0.5 points. " << endl;
+            cout << " Correct!!! You have gained 0.5 points. ";
+            getchar();
             input_stat->GPA += 0.5;
             input_stat->sun += 1;
           }
           else if(input ==2)
           {
-            cout << " Wrong! You have lost 0.5 input_stat->GPA points. "   << endl;
+            cout << " Wrong! You have lost 0.5 input_stat->GPA points. ";
+            getchar();
             input_stat->GPA -= 0.5;
             input_stat->sun += 1;
           }
           else
           {
-            cout << " Wrong! You have lost 0.5 input_stat->GPA points. " << endl;
+            cout << " Wrong! You have lost 0.5 input_stat->GPA points. ";
+            getchar();
             input_stat->GPA -= 0.5;
             input_stat->sun += 1;
           }
@@ -169,13 +181,15 @@ void garden(status* input_stat, int mood){
           input_stat->GPA -= 0.1;
         }
       else if(sel == 2){
-          cout << "Going back home... " << endl;
+          cout << "Going back home... ";
+          getchar();
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
           }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
-          cout << " By playing badminton you can gain health point per match! " << endl;
+          cout << " By playing badminton you can gain health point per match! ";
+          getchar();
           input_stat->hp += 3;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
