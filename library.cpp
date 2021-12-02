@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
 #include <string>
 #include <cstdlib>
@@ -17,6 +18,7 @@ void library(status* input_stat, int mood){
   double increment = 1;
   double decrement = -1;
   int sun;
+
   if (mood == 0){
     decrement -= 0.5;
     increment -= 0.2;
@@ -102,7 +104,7 @@ void library(status* input_stat, int mood){
         else if(Iris_Appear > 80 && Iris_Appear < 90){
           cout << " Olivia appears on the library " << endl;
           cout << " Hi, I'm Olivia. " << endl;
-          cout <<
+          cout << " I am living in Starr Hall, and your roommate!! " << endl;
           getchar();
           cout << " Feeling too tired and exhausted, you do not have any power to study. " << endl;
           cout << " But, you came to the library. " << endl;
@@ -167,7 +169,6 @@ void library(status* input_stat, int mood){
           cout << "Going back home. " << endl;
           input_stat->hp -= 1;
           input_stat->sun += 1;
-
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
