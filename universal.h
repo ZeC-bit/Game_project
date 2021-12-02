@@ -10,7 +10,7 @@ struct status {
     double inti_level[3];
     double GPA;
     int hp;
-    const std::string names[3];
+    std::string names[3];
 };
 
 #endif
