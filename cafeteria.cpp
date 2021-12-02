@@ -39,7 +39,7 @@ void cafeteria(status* input_stat, int mood){
       cin >> sel;
       if(sel ==1){
         srand(time(0));
-        // Daisy Appears on Cafeteria
+      // Random Chance of Daisy Appearing on the Cafeteria.
         int Daisy_Appear = rand() % 100;
         if(Daisy_Appear < 50){
           cout << "Daisy appears on the Cafeteria" << endl;
@@ -71,7 +71,7 @@ void cafeteria(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-        // Iris appears on the Cafeteria
+          // Random Chance of Iris Appearing on the Cafeteria.
         else if(Daisy_Appear > 50 && Daisy_Appear < 69){
           cout<< "Iris appears on the cafeteria" << endl;
           cout << "Iris: Hi, I'm Iris!" << endl;
@@ -101,7 +101,7 @@ void cafeteria(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
-        // Olivia Appears on the cafeteria
+        // Random Chance of Olivia Appearing on the Cafeteria.
         else if(Daisy_Appear > 70 && Daisy_Appear < 90){
           cout << "Olivia appears on the cafeteria" << endl;
           cout << " Hi, I'm Olivia. " << endl;
@@ -131,6 +131,7 @@ void cafeteria(status* input_stat, int mood){
             input_stat->sun += 1;
           }
         }
+          // Random Chance of Prof. Chim Appearing on the Cafeteria.
         else
         {
           cout << "Prof T.W. Chim appears" << endl;
