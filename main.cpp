@@ -10,34 +10,50 @@
 using namespace std;
 
 void introduction(string *name) {
+    cout << "Hey there!\n";
     cout << "Can you tell me your name?\n";
     cin >> *name;
     cout << "Hello " << *name << "! Welcome to the University of Love and Peace!\n";
     getchar();
     cout << "Whether it be your GPA, friends, or lover.";
     getchar();
-    cout << "Here, you can find what is lacking in your university life.";
+    cout << "Here, you can find what is lacking in your university life.\n";
     getchar();
-    cout << "Just a gentle push of that enter key and your journey until Christmas will begin!";
+    cout << "Today is December 15, XXXX.";
     getchar();
-    cout << "But remember! You are responsible for your choices!\n";
+    cout << "You have 9 days until Christmas Eve.";
+    getchar();
+    cout << "What you will be doing on Christmas Eve,";
+    getchar();
+    cout << "is all up to your choices.\n";
+    getchar();
+    cout << "Without further adieu, I'll leave it to you.\n";
     cout << "(Press enter/return to dive in!)";
     getchar();
-    
 }
 
 int main() {
     status starting_stat = {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}};
     cout << endl << endl;
-    cout << "HB and King SH presents" << endl << "(Press enter/return to continue)";
+    cout << "HB and King SH presents" << endl;
     getchar();
-    cout << "<Under the Mistletoe>";
+    cout << "     *            *            *" << endl;
+    cout << " *         * ..   ...                    *" << endl;
+    cout << "          _____________*_________   *" << endl;
+    cout << "    *     | Under the Mistletoe |        *" << endl;
+    cout << "          ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾" << endl;
+    cout << "  *               *                X  *" << endl;
+    cout << "           *               *      XXX      *" << endl;
+    cout << "     *           *             * XXXXX" << endl;
+    cout << "              *                    X      *" << endl;
+    cout << "***********************************X********" << endl;
+    cout << "(Press enter/return to continue)\n";
     getchar();
-    cout << "Hey you!";
+    cout << "(someone from darkness) : Hey you!";
     getchar();
-    cout <<  "Yes, you!";
+    cout <<  "(someone from the darkness) : Yes, you!";
     getchar();
-    cout << "You look familiar" << endl;
+    cout << "(someone from the darkness) : You look familiar !" << endl << endl;
     cout << "(Enter 1 if you want to start from beginning)" << endl << "(Enter 2 if you wish to continue from previous progress)" << endl;
     
     int starter;
@@ -59,6 +75,11 @@ int main() {
         }
         else {
             starting_stat = load_data(&starting_stat);
+            if (starting_stat == {"unkown", 1, 0, {0,0,0}, {0,0,0}, 3.0, 3, {"Iris", "Olivia", "Daisy"}}) {
+                cout << "Starting from beginning...";
+                getchar();
+                introduction(&starting_stat.name);
+            }
             break;
         }
     }
