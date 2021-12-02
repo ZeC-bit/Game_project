@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <iomanip>
 #include <time.h>
 #include <string>
 #include <cstdlib>
@@ -17,6 +18,7 @@ void lect(status* input_stat, int mood){
   char name;
   double increment = 1;
   double decrement = -1;
+  int sun;
   if (mood == 0){
     decrement = -1.5;
     increment = 0.8;
@@ -35,7 +37,7 @@ void lect(status* input_stat, int mood){
       if(sel ==1){
         srand(time(0));
         int Chim_Appear = rand() % 100;
-        if(Chim_Appear < 70){
+        if(Chim_Appear < 50){
           cout << " Prof. T. W. Chim appears on the Lecture Room. " << endl;
           getchar();
           cout << " Welcome to the class of COMP 2113!!! I will guide you how to become a Code Master!! " << endl;
@@ -52,18 +54,22 @@ void lect(status* input_stat, int mood){
           if(input == 1){
             cout << " Wrong! You have lost 1.5 input_stat->GPA points. " << endl;
             input_stat->GPA -= 1.5;
+            input_stat->sun += 1;
           }
           else if(input == 2){
             cout << " Correct!!! You have gained 1.5 input_stat->GPA points. " << endl;
             input_stat->GPA += 1.5;
+            input_stat->sun += 1;
           }
           else{
             cout << " Wrong! You have lost 1.5 input_stat->GPA points. " << endl;
             input_stat->GPA -= 1.5;
+            input_stat->sun += 1;
           }
         }
-        else if(Chim_Appear > 70 && Chim_Appear < 79){
+        else if(Chim_Appear > 50 && Chim_Appear < 69){
           cout<< "Iris appears on the Lecture Room. " << endl;
+          cout << "Iris: Hi, I'm Iris!" << endl;
           cout << " While you were studying hard, Iris said “I want to go to the Ocean Park.” " << endl;
           getchar();
           cout << " 1. Ignore her as if you did not hear anything and study harder on your work. " << endl;
@@ -75,18 +81,22 @@ void lect(status* input_stat, int mood){
             cout << " Iris: ....." << endl;
             input_stat->affi_level[0] -= decrement;
             input_stat->inti_level[0] -= decrement;
+            input_stat->sun += 1;
           }
           else if(input == 2){
             cout << " Iris: Alright! Let's study harder until end of all exams " << endl;
             input_stat->inti_level[0] += increment;
+            input_stat->sun += 1;
           }
           else{
             cout << " Iris: Seriously?? Great!! Let's go go go!!! " << endl;
             input_stat->affi_level[0] += increment;
+            input_stat->sun += 1;
           }
         }
-        else if(Chim_Appear > 80 && Chim_Appear < 90){
+        else if(Chim_Appear > 70 && Chim_Appear < 90){
           cout<< "Olivia appears on the Lecture Room. " << endl;
+          cout << " Hi, I'm Olivia. " << endl;
           cout << " While you were studying hard, Olivia said “I want to go to the Ocean Park.” " << endl;
           getchar();
           cout << " 1. Ignore her as if you did not hear anything and study harder on your work. " << endl;
@@ -98,21 +108,24 @@ void lect(status* input_stat, int mood){
             cout << " Olivia: ....." << endl;
             input_stat->affi_level[1] -= decrement;
             input_stat->inti_level[1] -= decrement;
+            input_stat->sun += 1;
           }
           else if(input == 2){
             cout << " Olivia: Alright! Let's study harder until end of all exams " << endl;
             input_stat->inti_level[1] += increment;
+            input_stat->sun += 1;
           }
           else{
             cout << " Olivia: Seriously?? Great!! Let's go go go!!! " << endl;
             input_stat->affi_level[1] += increment;
+            input_stat->sun += 1;
           }
         }
         else
         {
           cout << "Daisy appears on the Lecture Room. " << endl;
-          cout<< "Iris appears on the Lecture Room. " << endl;
-          cout << " While you were studying hard, Iris said “I want to go to the Ocean Park.” " << endl;
+          cout << "Hi!! I'm Daisy~~~ " << endl;
+          cout << " While you were studying hard, Daisy said “I want to go to the Ocean Park.” " << endl;
           getchar();
           cout << " 1. Ignore her as if you did not hear anything and study harder on your work. " << endl;
           cout << " 2. You make an appointment with her to go to the Ocean Park after the exams. " << endl;
@@ -123,26 +136,35 @@ void lect(status* input_stat, int mood){
             cout << " Daisy: ....." << endl;
             input_stat->affi_level[2] -= decrement;
             input_stat->inti_level[2] -= decrement;
+            input_stat->sun += 1;
           }
           else if(input == 2){
             cout << " Daisy: Alright! Let's study harder until end of all exams " << endl;
             input_stat->inti_level[2] += increment;
+            input_stat->sun += 1;
           }
           else{
             cout << " Daisy: Seriously?? Great!! Let's go go go!!! " << endl;
             input_stat->affi_level[2] += increment;
+            input_stat->sun += 1;
           }
         }
           input_stat->hp -= 1;
+          input_stat->GPA += 0.3;
         }
       else if(sel == 2){
           cout << "Going back home. " << endl;
           input_stat->hp -= 1;
+          input_stat->sun += 1;
+          input_stat->GPA -= 0.1;
         }
       else if(sel == 3){
           cout << " You entered Badminton Club. " << endl;
           cout << " By playing badminton you can gain health point per match! " << endl;
           input_stat->hp += 1;
+          input_stat->sun += 1;
+          input_stat->GPA -= 0.1;
         }
+      run = 0;
       }
     }
