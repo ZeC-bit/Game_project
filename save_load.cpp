@@ -34,7 +34,7 @@ void save_data(status stat_save)
         // create a new .txt file with the input name
         d_out.open(save_name.c_str());
         // write data to the file save file
-        d_out << stat_save.name << endl << stat_save.date << endl << stat_save.sun << endl;
+        d_out << stat_save.game_length << endl << stat_save.name << endl << stat_save.date << endl << stat_save.sun << endl;
         // write data stored in the struct's array
         for (int i = 0; i != 3; i++) {
             d_out << stat_save.affi_level[i] << endl << stat_save.inti_level[i] << endl;
@@ -104,17 +104,18 @@ status load_data (status *stat_ptr) {
                 fedex[index] = container.substr(0, posi);
                 container = container.erase(0, posi + 1);
             }
-            stat_ptr->name = fedex[0];
-            stat_ptr->date = stoi(fedex[1]);
-            stat_ptr->sun = stoi(fedex[2]);
+            stat_ptr->game_length = stoi(fedex[0]);
+            stat_ptr->name = fedex[1];
+            stat_ptr->date = stoi(fedex[2]);
+            stat_ptr->sun = stoi(fedex[3]);
             for (int k = 0; k != 3; k++) {
-                int l = 2 * k + 3;
-                int m = 2 * k + 4;
+                int l = 2 * k + 4;
+                int m = 2 * k + 5;
                 stat_ptr->affi_level[k] = stod(fedex[l]);
                 stat_ptr->inti_level[k] = stod(fedex[m]);
             }
-            stat_ptr->GPA = stod(fedex[9]);
-            stat_ptr->hp = stoi(fedex[10]);
+            stat_ptr->GPA = stod(fedex[10]);
+            stat_ptr->hp = stoi(fedex[11]);
 
             cout << "Data has been successfully loaded!";
             getchar();
