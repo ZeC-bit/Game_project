@@ -5,11 +5,14 @@
 #include <string>
 #include <cstdlib>
 #include <stdlib.h>
+#include "library.h"
 #include "universal.h"
 using namespace std;
-// play.day
-//play.period ==> 1. morning 2. afternoon 3. evening
-//play.location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
+//Inputs of the function are struct Status. The affinity level, intimacy level, GPA, and
+//Health points are stored in the structure. Throughout the process of the game, the data stored
+//Status Structure will be continuously modified where they are set as pointer variables.
+// Perid of the day ==> 1. morning 2. afternoon 3. evening
+// Location ==> 0. Library 1. Garden 2. Student Cafeteria  3. Lecture Room
 // Iris = [0], Olivia = [1], Daisy = [2]
 void library(status* input_stat, int mood){
   char choose;
@@ -182,7 +185,6 @@ void library(status* input_stat, int mood){
           input_stat->hp += 2;
           input_stat->sun += 1;
           input_stat->GPA -= 0.1;
-
         }
       run = 0;
       }
