@@ -8,6 +8,7 @@
 #include "cafeteria.h"
 #include "lecture.h"
 #include "save_load.h"
+#include "ending.h"
 
 using namespace std;
 // This is a function that will receive user's next action
@@ -138,7 +139,7 @@ void execution(status stat_in) {
     }
     if (current_stat.date >= 10) {
         cout << "Day 10" << endl;
-        ending(&current_stat);
+        ending(current_stat);
     }
     //return to main function
 }
