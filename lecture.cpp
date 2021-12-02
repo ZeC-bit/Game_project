@@ -101,7 +101,7 @@ void lect(status* input_stat, int mood){
           }
         }
           // Random Chance of Olivia Appearing on the Lecture Room.
-        else if(Chim_Appear > 70 && Chim_Appear < 90){
+        else if(Chim_Appear >= 70 && Chim_Appear < 90){
           cout<< "Olivia appears on the Lecture Room. " << endl;
           cout << " Hi, I'm Olivia. " << endl;
           cout << " While you were studying hard, Olivia said “I want to go to the Ocean Park.” " << endl;
