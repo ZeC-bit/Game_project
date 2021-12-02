@@ -85,8 +85,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Iris: ....." << endl;
-            input_stat->affi_level[0] -= decrement;
-            input_stat->inti_level[0] -= decrement;
+            input_stat->affi_level[0] += decrement;
+            input_stat->inti_level[0] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -113,8 +113,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Olivia: ....." << endl;
-            input_stat->affi_level[1] -= decrement;
-            input_stat->inti_level[1] -= decrement;
+            input_stat->affi_level[1] += decrement;
+            input_stat->inti_level[1] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
@@ -142,8 +142,8 @@ void lect(status* input_stat, int mood){
           cin >> input;
           if(input == 1){
             cout << " Daisy: ....." << endl;
-            input_stat->affi_level[2] -= decrement;
-            input_stat->inti_level[2] -= decrement;
+            input_stat->affi_level[2] += decrement;
+            input_stat->inti_level[2] += decrement;
             input_stat->sun += 1;
           }
           else if(input == 2){
