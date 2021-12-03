@@ -40,7 +40,7 @@ void save_data(status stat_save)
             d_out << stat_save.affi_level[i] << endl << stat_save.inti_level[i] << endl;
         }
         d_out << stat_save.GPA << endl << stat_save.hp << endl;
-        cout << "Your current progress has been saved at \"" << save_name << "!\"" << endl;
+        cout << "Your current progress has been saved at \"" << save_name << "\"!" << endl;
         d_out.close();
         getchar();
     }
