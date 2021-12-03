@@ -29,16 +29,16 @@ I hope you have a heartwarming time with our game. You will reap as you sowed!
 
 Coding requirements
 1.  Generation of random game sets or events: 
-Throughout the story, the player will face different types of people depending on where the player is. But there are different probabilities for meeting the characters in the particular place. Moreover, there is an array 'Mood' of NPCs which will be set randomly everyday.
+Throughout the story, the player will face different types of people depending on the location of the player. But there are different probabilities for meeting the characters in the particular place. For example, we set 50 percent of Iris emerging at Main Library, and setting the other characters as different percentage. Moreover, there is an array 'Mood' of NPCs which will be set randomly everyday in scale of 0 to 2 where in bad mood '0', the player will have shorter increase in the affinity level and intimacy level, while decreasing higher in amount of the variables whereas in good mood at the opposite way.
 
 2.  Data structures for storing game status:  
-By bringing up the progress file which has been saved by the each of the player’s game status, the player can load the game. When the game has been started, the data of the player will be moved to the Game_data structure, which will be used throughout the game process.
+By bringing up the progress file which has been saved by the each of the player’s game status, the player can load the game. When the game has been started, the data of the player will be moved to the Status structure in universal.h file, which will be used throughout the game process.
 
 3.  Dynamic memory management: 
-We will make arrays for affinity level, and intimacy level that depend on which characters you meet. Based on the choices you make, particular affinity level or intimacy level will vary. Different indices of affinity level, and intimacy level arrays will contain different information for each NPC.
+We will make arrays for affinity level, and intimacy level that depend on which characters you meet. Based on the choices you make, particular affinity level or intimacy level will vary. Different indices of affinity level, and intimacy level arrays will contain different information for each NPC. Setting days of which the player can choose in scale of 1 to 10 with 0 to 3 being difficult level, 4 to 6 for moderate level, 7 to 10 as easy level.
 
 4.	Continue (File input/output): 
-The output text file will store the players' data such as nickname, progress, affinity level, intimacy level and so on. File input, output will be used to execute the “continue” feature. For instance, as a new player is formed and saved for the first time, the text file “game_users.txt” will be created and the program will read the user data from the file when the player loads their game data and it will save it to the Game_data structure to use it in the game.
+The output text file will store the players' data such as nickname, progress, affinity level, intimacy level and so on. File input, output will be used to execute the “continue” feature. For instance, as a new player is formed and saved for the first time, the text file “load_name.txt” will be created and the program will read the user data from the file when the player loads their game data and it will save it to the Status structure to use it in the game.
 
 5.	Program codes in multiple files: 
-We are going to write one main.cpp and multiple files in the each of the functions in separate .cpp files. We will write a header file for each .cpp file and compile all of the files with makefile. The header file will be called “normal.h” where there are structures in separate header file.
+We are going to write one main.cpp and multiple files in the each of the functions in separate .cpp files. We will write a header file for each .cpp file and compile all of the files with makefile. The header file will be called “universal.h” where there are structures in separate header file.
