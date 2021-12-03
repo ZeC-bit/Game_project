@@ -9,6 +9,13 @@ Game Description:
 
 So, you’ve come to the university with a dream of meeting new people, but things have not turned out very nicely for you? No worries, because we have developed this amazing game where you can wander about a virtual world full of exciting places, people and events awaiting you.
 
+How to Install and run the game:
+
+1) Prepare the files in the same directory(cafeteria.cpp cafeteria.h ending.cpp ending.h execution.cpp execution.h garden.cpp garden.h lecture.cpp lecture.h library.cpp library.h save_load.cpp save_load.h universal.h main.cpp)
+2) On shell, type "makefile" command. The execution file will be created.
+3) On shell, type "./Under_the_Mistletoe" command.
+4) Play the game!
+
 Date System and Dynamic Endings: 
 
 You will be given 10 virtual days until Christmas to go through the game. After 10 days, you will be taken to different ending scenes depending on the affinity level and some other factors such as whether you have encountered some special events during the game.
