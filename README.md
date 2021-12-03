@@ -21,6 +21,24 @@ Locations:
 
 In this game are ‘Lecture room’, ‘Library’, ‘Canteen’, ‘Museum’, ‘Gymnasium’, ‘Garden’, ‘House’, ‘Convenience store’, ‘Café’, ‘Theatre’, but subject to change depending on the storyline design.
 
+Libray we might use:
+
+cstdlib and ctime: use for make random numbers while rolling the dice.
+
+iostream: standard input and output fstream: file I/O.
+
+string: store the data of each move and conditions.
+
+cmath: use for calculation.
+
+vector: to store the data and do some operations.
+
+map: do some operations on stored data.
+
+algorithm: use some well-worked functions and algorithms.
+
+iomanip: manipulate input and output
+
 Status variables: 
 
 Your choices of action and how you talk to the characters in the game will affect status variables such as ‘Affinity level’, ‘GPA’, ‘Intimacy level’. ‘Affinity level’ and ‘Intimacy level’ are variables that are assigned to each NPC, whereas ‘GPA’ is a single variable assigned to the player.  There will also be a random variable ‘Mood’ for each NCP that will be set randomly everyday (Happy, So so, Depressed). This ‘Mood’ may be multiplied to how much the player’s action affects the ‘Affinity level’.
@@ -42,3 +60,5 @@ The output text file will store the players' data such as nickname, progress, af
 
 5.	Program codes in multiple files: 
 We are going to write one main.cpp and multiple files in the each of the functions in separate .cpp files. We will write a header file for each .cpp file and compile all of the files with makefile. The header file will be called “universal.h” where there are structures in separate header file.
+
+
