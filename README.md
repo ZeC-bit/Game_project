@@ -1,6 +1,7 @@
 # COMP2113-Game-project
 
-COMP2113 Project – Dating Simulation Game
+Text-based dating simulation game with randomised variables, dynamic memory management, file I/O, and Makefile functions implemented.
+
 Group 7
 
 PARK Hyeonbeom (3035552789), LEE Seunghun (3035551515)
