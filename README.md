@@ -1,4 +1,4 @@
-# Game-Project
+# COMP2113-Game-Project
 
 Text-based dating simulation game with randomised variables, dynamic memory management, file I/O, and Makefile functions implemented.
 
