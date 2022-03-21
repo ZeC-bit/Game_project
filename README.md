@@ -25,8 +25,9 @@ Date System and Dynamic Endings:
 You will be given 10 virtual days until Christmas to go through the game. After 10 days, you will be taken to different ending scenes depending on the affinity level and some other factors such as whether you have encountered some special events during the game.
 
 ![Dean's List Ending](https://user-images.githubusercontent.com/74304944/159212755-a7e6c5c4-88a7-40a2-811a-4f4b251234a2.png)
+      
   
-<Dean's List Ending>
+      <Dean's List Ending>
 
 
 ![Solo Ending](https://user-images.githubusercontent.com/74304944/159213278-d70660bd-7313-4eb4-aee1-df57cca121f1.png)
