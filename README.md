@@ -82,6 +82,15 @@ Throughout the story, the player will face different types of people depending o
 2.  Data structures for storing game status:  
 By bringing up the progress file which has been saved by the each of the player’s game status, the player can load the status from save file or start from beginning with basic status. When the game has been started, the data of the player will be moved to the Status structure defined in universal.h file, which will be used throughout the game process. Status structure contains different variables with appropriate purpose and type. game length in 'int', playername in 'string', date and time of the day in 'int', affinity levels and intimacy levels in 'array of double' (size 3 because there are 3 characters), GPA in 'double' and HP in 'int'. We used double for affinity level and intimacy level for the purpose of careful optimization of difficulty.
 
+
+![Saving Current Game](https://user-images.githubusercontent.com/74304944/159225598-a85e6f0a-fe79-4ec3-a286-6ecb59fe0463.png)
+      
+      <Saving Current Game>
+      
+      You can save the current game status if you want to play the game later. 
+      For instance, let's end our game at Day 1 Evening and save the game name as GameTrial_1
+
+
 3.  Dynamic memory management: 
 We will make arrays for affinity level, and intimacy level that depend on which characters you meet. Based on the choices you make, particular affinity level or intimacy level will vary. Different indices of affinity level, and intimacy level arrays will contain different information for each NPC. 
 Moreover, we added a feature to let the user choose the length of the game. Our game (including the difficulty of attaining endings) was optimized for 5 days. However, the user can choose from 1 to 10 days based on their preference. In general, the more you play, the higher the affinity level and intimacy level will reach.
