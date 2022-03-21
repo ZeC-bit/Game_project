@@ -16,6 +16,7 @@ How to Install and run the game:
 
 ![Opening](https://user-images.githubusercontent.com/74304944/159212831-c2b88135-b958-4e99-9754-3a522b04206e.png)
 
+
 <Opening>
 
 
@@ -28,10 +29,9 @@ You will be given 10 virtual days until Christmas to go through the game. After 
 <Dean's List Ending>
 
 
-![Solo Ending](https://user-images.githubusercontent.com/74304944/159212776-af9e7798-f4b9-43ff-bbd1-774d9475819b.png)
-      
-<Solo Ending>
+![Solo Ending](https://user-images.githubusercontent.com/74304944/159213278-d70660bd-7313-4eb4-aee1-df57cca121f1.png)
 
+      <Solo Ending>
 
 
 Time System and Action: 
