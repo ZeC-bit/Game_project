@@ -43,7 +43,8 @@ But, keep in mind that you have to play badminton in order to keep fit, unless y
 
 
 ![Gameover](https://user-images.githubusercontent.com/74304944/159213887-4505765d-3740-4dc3-9de5-8635d69fd685.png)
-      <GAM>
+      
+      <GAME OVER>
 
 
 Locations: 
