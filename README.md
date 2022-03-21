@@ -37,7 +37,14 @@ You will be given 10 virtual days until Christmas to go through the game. After 
 
 Time System and Action: 
 
-Each day, there are 5 timeslots: Morning 1, Morning 2, Noon, Afternoon, Evening. Some places are only open during specific timeslot. For each timeslot, you can take some action such as study at a café, eat lunch with a character in the story, watch movie with group project mate.
+Each day, there are 5 timeslots: Morning 1, Morning 2, Noon, Afternoon, Evening. Some places are only open during specific timeslot. For each timeslot, you can take some action such as study at a café, eat lunch with a character in the story, watch movie with group project mate. 
+But, keep in mind that you have to play badminton in order to keep fit, unless you might die...!
+
+
+
+![Gameover](https://user-images.githubusercontent.com/74304944/159213887-4505765d-3740-4dc3-9de5-8635d69fd685.png)
+      <GAM>
+
 
 Locations: 
 
