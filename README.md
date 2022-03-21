@@ -15,6 +15,7 @@ How to Install and run the game:
 
 
 ![Opening](https://user-images.githubusercontent.com/74304944/159212831-c2b88135-b958-4e99-9754-3a522b04206e.png)
+
 <Opening>
 
 
@@ -28,6 +29,9 @@ You will be given 10 virtual days until Christmas to go through the game. After 
 
 
 ![Solo Ending](https://user-images.githubusercontent.com/74304944/159212776-af9e7798-f4b9-43ff-bbd1-774d9475819b.png)
+      
+<Solo Ending>
+
 
 
 Time System and Action: 
