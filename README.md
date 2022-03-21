@@ -17,7 +17,7 @@ How to Install and run the game:
 ![Opening](https://user-images.githubusercontent.com/74304944/159212831-c2b88135-b958-4e99-9754-3a522b04206e.png)
 
 
-<Opening>
+      <Opening>
 
 
 Date System and Dynamic Endings: 
